@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <title>Open Active</title>
+    <link href="css/style.default.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body cz-shortcut-listen="true" style="overflow: visible;" class="">
+<style>
+.center-cropped {
+  object-fit: cover; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+}
+</style>
+    <style>
+    .vertical-center {
+        display: table-cell;
+        vertical-align: middle;
+        float: none;
+    }
+    </style>
+    <!-- Preloader -->
+    <div id="preloader" style="display: none;">
+        <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
+    </div>
+    <section>
+        <!-- leftpanel -->
+        <div class="mainpanel" style="height: 1253px; margin-left: 0px;">
+            <div class="headerbar">
+                <div class="logopanel">
+                    <h1><span>{</span> open active <span>}</span></h1>
+                </div>
+                <!-- header-right -->
+            </div>
+            <!-- headerbar -->
+            <div class="pageheader">
+                <h2><i class="fa fa-pencil"></i>Getting Started <span>You're just a few steps away from making your life much easier...</span></h2>
+            </div>
+            <div class="contentpanel">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="panel panel-default">
+                            <div class="panel-body panel-body-nopadding">
+                                <!-- BASIC WIZARD -->
+                                <div id="disabledTabWizard" class="basic-wizard">
+                                    <ul class="nav nav-pills nav-justified nav-disabled-click">
+                                        <li class="active"><a href="#dtab1" data-toggle="tab"><span>Step 1:</span> Sessions</a></li>
+                                        <li class=""><a href="#dtab2" data-toggle="tab"><span>Step 2:</span> Organisation</a></li>
+                                        <li class=""><a href="#dtab3" data-toggle="tab"><span>Step 3:</span> Promotion</a></li>
+                                        <li class=""><a href="#dtab4" data-toggle="tab"><span>Step 4:</span> Features</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="dtab1">
+                                            <form class="form" id="firstForm" novalidate="novalidate" _lpchecked="1">
+                                                <div class="tab-content">
+                                                    <div class="tab-pane active" id="vtab1">
+                                                        <h4>What activity sessions do you run, and when?</h4>
+                                                        <p>Just enter a few sessions for now to get an idea of how this works.</p>
+                                                        <div class="alert alert-info fade in nomargin">
+                                                            <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                                            <h4>Wait!</h4>
+                                                            <p>Before you fill out your session details by hand, have you considered a booking system? Or do you have a website to manage your activities already?</p>
+                                                            <p>
+                                                                <button class="btn btn-primary" type="button">I have one</button>
+                                                                <button class="btn btn-info" type="button">Help me decide</button>
+                                                                <button class="btn btn-white" type="button">No thanks</button>
+                                                            </p>
+                                                        </div>
+                                                        <p></p>
+                                                        <div class="table-responsive">
+                                                            <table class="table mb30">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Activity Name</th>
+                                                                        <th>Location</th>
+                                                                        <th>Date/Time</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Example activity</td>
+                                                                        <td>London</td>
+                                                                        <td>Every Saturday, 10:00-11:00</td>
+                                                                        <td class="table-action">
+                                                                            <a href=""><i class="fa fa-copy"></i></a><a href=""><i class="fa fa-pencil"></i></a>
+                                                                            <a href="" class="delete-row"><i class="fa fa-trash-o"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="text" name="name" placeholder="Activity name" class="form-control">
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" name="name" placeholder="Location" class="form-control">
+                                                                        </td>
+                                                                        <td><a data-type="combodate" id="comboDateTime" href="#" class="editable editable-click" data-original-title="" title="">Click to set date and time</a></td>
+                                                                        <td class="table-action">
+                                                                            <button class="btn btn-block btn-primary btn-sm">Save</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="dtab1">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-4 control-label">Product ID</label>
+                                                            <div class="col-sm-5">
+                                                                <input type="text" name="product_id" class="form-control" required="" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-4 control-label">Product Name</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" name="product_name" class="form-control" required="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-4 control-label">Category</label>
+                                                            <div class="col-sm-4">
+                                                                <select class="select" data-placeholder="Choose One" required="">
+                                                                    <option value=""></option>
+                                                                    <option value="3d">3D Animation</option>
+                                                                    <option value="web">Web Design</option>
+                                                                    <option value="software">Software Engineering</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="vtab3">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-4 control-label">Card No</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" name="cardno" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-4 control-label">CSV</label>
+                                                            <div class="col-sm-4">
+                                                                <input type="text" name="csv" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- tab-content -->
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane" id="dtab2">
+                                            <div class="tab-content">
+                                                <h4>Can you give us some more information about your organisation, club, or team? </h4>
+                                                <p>These details will be useful to anyone who wants to find out more about you.</p>
+                                                <p></p>
+                                                <form class="form">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4">Organisation Name</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" name="cardno" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4">Address</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" name="cardno" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4">Telephone Number</label>
+                                                        <div class="col-sm-4">
+                                                            <input type="text" name="csv" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4">E-mail Address</label>
+                                                        <div class="col-sm-4">
+                                                            <input type="text" name="csv" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4">Website</label>
+                                                        <div class="col-sm-4">
+                                                            <input type="text" name="csv" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="dtab3">
+                                            <style>
+                                            .alert-success {
+                                                background-color: #f7f7f7;
+                                            }
+                                            </style>
+                                            <div class="tab-content">
+                                                <h4>How would you like to promote your activities?</h4>
+                                                <p>You can change these settings later</p>
+                                                <p></p>
+                                                <form class="form novalidate">
+                                                    <div class="form-group  alert alert-success">
+                                                        <label class="col-sm-10 control-label">
+                                                            <p class="text-primary">New Website </p>
+                                                            We can make a website for you if don't have one.</label>
+                                                        <div class="col-sm-2 control-label">
+                                                            <div class="toggle-chat1 toggle-primary"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group  alert alert-success">
+                                                        <label class="col-sm-10 control-label">
+                                                            <p class="text-primary">Existing Website </p>We can automatically put session details on your existing site.</label>
+                                                        <div class="col-sm-2 control-label">
+                                                            <div class="toggle-chat1 toggle-primary"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group  alert alert-success">
+                                                        <label class="col-sm-10 control-label">
+                                                            <p class="text-primary">E-mail</p>Get your organisation's own e-mail address</label>
+                                                        <div class="col-sm-2 control-label">
+                                                            <div class="toggle-chat1 toggle-primary"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group  alert alert-success">
+                                                        <label class="col-sm-10 control-label">
+                                                            <p class="text-primary">Facebook</p> We can post to your Facebook page, or guide you to create one.</label>
+                                                        <div class="col-sm-2 control-label">
+                                                            <div class="toggle-chat1 toggle-primary"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group  alert alert-success">
+                                                        <label class="col-sm-10 control-label">
+                                                            <p class="text-primary">Twitter</p> We can tweet for you, or show you how to set up twitter.</label>
+                                                        <div class="col-sm-2 control-label">
+                                                            <div class="toggle-chat1 toggle-primary"></div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="dtab4">
+                                            <style>
+                                            .alert-success {
+                                                background-color: #f7f7f7;
+                                            }
+                                            </style>
+                                            <div class="tab-content">
+                                                <h4>What about these extra features?</h4>
+                                                <p>You can change these settings later.</p>
+                                                <p></p>
+                                                <form class="form novalidate">
+                                                    <div class="form-group  alert alert-success">
+                                                        <label class="col-sm-10 control-label">
+                                                            <p class="text-primary">Upshot </p>
+                                                            Helps you track against your targets to reach your funding goals.</label>
+                                                        <div class="col-sm-2 control-label">
+                                                            <div class="toggle-chat1 toggle-primary"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group  alert alert-success">
+                                                        <label class="col-sm-10 control-label">
+                                                            <p class="text-primary">Online Booking </p>Allows people to book your activities and pay for them online</label>
+                                                        <div class="col-sm-2 control-label">
+                                                            <div class="toggle-chat1 toggle-primary"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group  alert alert-success">
+                                                        <label class="col-sm-10 control-label">
+                                                            <p class="text-primary">Reports </p>We give you information about the success of your promotion</label>
+                                                        <div class="col-sm-2 control-label">
+                                                            <div class="toggle-chat1 toggle-primary"></div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- tab-content -->
+                                    <ul class="pager wizard">
+                                        <li class="previous disabled"><a href="javascript:void(0)">Previous</a></li>
+                                        <li class="next"><a href="javascript:void(0)">Next</a></li>
+                                        <li class="next finish" style="display:none;"><a href="profile.html">Finish</a></li>
+                                    </ul>
+                                </div>
+                                <!-- #disabledTabWizard -->
+                            </div>
+                            <!-- panel-body -->
+                        </div>
+                        <!-- panel -->
+                    </div>
+                    <!-- col-md-6 -->
+                    <div class="col-md-4">
+                     <div class="panel panel-warning">
+                            <div class="panel-heading">
+                                <div class="panel-btns">
+                                    <a href="" class="panel-close">×</a>
+                                    <a href="" class="minimize">−</a>
+                                </div>
+                                <!-- panel-btns -->
+                                <h3 class="panel-title">Feedback</h3>
+                            </div>
+                            <div class="panel-body">
+                                <p>We're making this service better every day! If you have any feedback on this page please share and click 'Send' below. You will not lose anything that you've been doing on the page so far.</p>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <textarea id="autoResizeTA" class="form-control" placeholder="It would be much better if you could..." rows="5" style="height: 90px;"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <button class="btn btn-warning">Send Feedback</button>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Sponsors</h3>
+                            </div>
+                            <div class="panel-body">
+                                <p>The free session listings service is provided in London by <strong>London Sport</strong>.</p>
+                                <div class="rows">
+                                    <div class="col-xs-4 vertical-center">
+                                        <img src="http://www.londonsport.org/static/img/london-sport.svg">
+                                    </div>
+                                    <div class="col-xs-8 vertical-center">
+                                        <p><strong>London Sport</strong> aims to make London the most physically active sporting city in the world.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+            <!-- contentpanel -->
+        </div>
+        <!-- mainpanel -->
+        <div class="rightpanel">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a href="#rp-alluser" data-toggle="tab"><i class="fa fa-users"></i></a></li>
+                <li><a href="#rp-favorites" data-toggle="tab"><i class="fa fa-heart"></i></a></li>
+                <li><a href="#rp-history" data-toggle="tab"><i class="fa fa-clock-o"></i></a></li>
+                <li><a href="#rp-settings" data-toggle="tab"><i class="fa fa-gear"></i></a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="rp-alluser">
+                    <h5 class="sidebartitle">Online Users</h5>
+                    <ul class="chatuserlist">
+                        <li class="online">
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/userprofile.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Eileen Sideways</strong>
+                                    <small>Los Angeles, CA</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                        <li class="online">
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user1.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <span class="pull-right badge badge-danger">2</span>
+                                    <strong>Zaham Sindilmaca</strong>
+                                    <small>San Francisco, CA</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                        <li class="online">
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user2.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Nusja Nawancali</strong>
+                                    <small>Bangkok, Thailand</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                        <li class="online">
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user3.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Renov Leongal</strong>
+                                    <small>Cebu City, Philippines</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                        <li class="online">
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user4.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Weno Carasbong</strong>
+                                    <small>Tokyo, Japan</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                    </ul>
+                    <div class="mb30"></div>
+                    <h5 class="sidebartitle">Offline Users</h5>
+                    <ul class="chatuserlist">
+                        <li>
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user5.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Eileen Sideways</strong>
+                                    <small>Los Angeles, CA</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user2.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Zaham Sindilmaca</strong>
+                                    <small>San Francisco, CA</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user3.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Nusja Nawancali</strong>
+                                    <small>Bangkok, Thailand</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user4.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Renov Leongal</strong>
+                                    <small>Cebu City, Philippines</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user5.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Weno Carasbong</strong>
+                                    <small>Tokyo, Japan</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user4.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Renov Leongal</strong>
+                                    <small>Cebu City, Philippines</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user5.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Weno Carasbong</strong>
+                                    <small>Tokyo, Japan</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="rp-favorites">
+                    <h5 class="sidebartitle">Favorites</h5>
+                    <ul class="chatuserlist">
+                        <li class="online">
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user2.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Eileen Sideways</strong>
+                                    <small>Los Angeles, CA</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user1.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Zaham Sindilmaca</strong>
+                                    <small>San Francisco, CA</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user3.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Nusja Nawancali</strong>
+                                    <small>Bangkok, Thailand</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                        <li class="online">
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user4.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Renov Leongal</strong>
+                                    <small>Cebu City, Philippines</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                        <li class="online">
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user5.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Weno Carasbong</strong>
+                                    <small>Tokyo, Japan</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="rp-history">
+                    <h5 class="sidebartitle">History</h5>
+                    <ul class="chatuserlist">
+                        <li class="online">
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user4.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Eileen Sideways</strong>
+                                    <small>Hi hello, ctc?... would you mind if I go to your...</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user2.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Zaham Sindilmaca</strong>
+                                    <small>This is to inform you that your product that we...</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a href="#" class="pull-left media-thumb">
+                                    <img alt="" src="images/photos/user3.png" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <strong>Nusja Nawancali</strong>
+                                    <small>Are you willing to have a long term relat...</small>
+                                </div>
+                            </div>
+                            <!-- media -->
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane pane-settings" id="rp-settings">
+                    <h5 class="sidebartitle mb20">Settings</h5>
+                    <div class="form-group">
+                        <label class="col-xs-8 control-label">Show Offline Users</label>
+                        <div class="col-xs-4 control-label">
+                            <div class="toggle-chat1 toggle-primary"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-8 control-label">Enable History</label>
+                        <div class="col-xs-4 control-label">
+                            <div class="toggle-chat1 toggle-primary"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-8 control-label">Show Full Name</label>
+                        <div class="col-xs-4 control-label">
+                            <div class="toggle-chat1 toggle-success" style="height: 20px; width: 50px;">
+                                <div class="toggle-slide">
+                                    <div class="toggle-inner" style="width: 80px; margin-left: -30px;">
+                                        <div class="toggle-on" style="height: 20px; width: 40px; text-align: center; text-indent: -10px; line-height: 20px;">ON</div>
+                                        <div class="toggle-blob" style="height: 20px; width: 20px; margin-left: -10px;"></div>
+                                        <div class="toggle-off active active" style="height: 20px; width: 40px; margin-left: -10px; text-align: center; text-indent: 10px; line-height: 20px;">OFF</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-8 control-label">Show Location</label>
+                        <div class="col-xs-4 control-label">
+                            <div class="toggle-chat1 toggle-primary"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- tab-pane -->
+            </div>
+            <!-- tab-content -->
+        </div>
+        <!-- rightpanel -->
+    </section>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modernizr.min.js"></script>
+    <script src="js/jquery.sparkline.min.js"></script>
+    <script src="js/toggles.min.js"></script>
+    <script src="js/retina.min.js"></script>
+    <script src="js/jquery.cookies.js"></script>
+    <script src="js/bootstrap-wizard.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+    jQuery(document).ready(function() {
+
+        "use strict";
+
+        // Basic Wizard
+        jQuery('#basicWizard').bootstrapWizard();
+
+        // Progress Wizard
+        $('#progressWizard').bootstrapWizard({
+            'nextSelector': '.next',
+            'previousSelector': '.previous',
+            onNext: function(tab, navigation, index) {
+                var $total = navigation.find('li').length;
+                var $current = index + 1;
+                var $percent = ($current / $total) * 100;
+                jQuery('#progressWizard').find('.progress-bar').css('width', $percent + '%');
+            },
+            onPrevious: function(tab, navigation, index) {
+                var $total = navigation.find('li').length;
+                var $current = index + 1;
+                var $percent = ($current / $total) * 100;
+                jQuery('#progressWizard').find('.progress-bar').css('width', $percent + '%');
+            },
+            onTabShow: function(tab, navigation, index) {
+                var $total = navigation.find('li').length;
+                var $current = index + 1;
+                var $percent = ($current / $total) * 100;
+                jQuery('#progressWizard').find('.progress-bar').css('width', $percent + '%');
+            }
+        });
+
+        // Disabled Tab Click Wizard
+        jQuery('#disabledTabWizard').bootstrapWizard({
+            tabClass: 'nav nav-pills nav-justified nav-disabled-click',
+            onTabClick: function(tab, navigation, index) {
+                return false;
+            },
+            onLast: function() {
+                window.location.href = "profile.html";
+                return true;
+            },
+            onTabShow: function(tab, navigation, index) {
+                // If it's the last tab then hide the last button and show the finish instead
+                var $total = navigation.find('li').length;
+                var $current = index+1;
+
+                if($current >= $total) {
+                    $('#disabledTabWizard').find('.pager .next').hide();
+                    $('#disabledTabWizard').find('.pager .finish').show();
+                    $('#disabledTabWizard').find('.pager .finish').removeClass('disabled');
+                } else {
+                    $('#disabledTabWizard').find('.pager .next').show();
+                    $('#disabledTabWizard').find('.pager .finish').hide();
+                }
+            }
+        });
+
+        // With Form Validation Wizard
+        var $validator = jQuery("#firstForm").validate({
+            highlight: function(element) {
+                jQuery(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+            },
+            success: function(element) {
+                jQuery(element).closest('.form-group').removeClass('has-error');
+            }
+        });
+
+        jQuery('#validationWizard').bootstrapWizard({
+            tabClass: 'nav nav-pills nav-justified nav-disabled-click',
+            onTabClick: function(tab, navigation, index) {
+                return false;
+            },
+            onNext: function(tab, navigation, index) {
+                var $valid = jQuery('#firstForm').valid();
+                if (!$valid) {
+
+                    $validator.focusInvalid();
+                    return false;
+                }
+            }
+        });
+
+        jQuery(".select2").select2({
+            width: '100%',
+            minimumResultsForSearch: -1
+        });
+
+
+    });
+    </script>
+</body>
+
+</html>
