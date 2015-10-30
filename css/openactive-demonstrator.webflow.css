@@ -270,6 +270,7 @@ p {
   padding: 15px;
   border-top: 1px solid #dbdbdb;
   background-color: #383838;
+  color: #9e9e9e;
   text-align: center;
 }
 .footer-text {
@@ -334,7 +335,7 @@ p {
 }
 .join-us-hero-image {
   padding-top: 217px;
-  background-image: url('../images/Depositphotos_10934355_original.jpg');
+  background-image: url('../images/Depositphotos_10934355_sm.jpg');
   background-position: 50% 0px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -431,6 +432,9 @@ p {
 .join-cta:hover {
   color: #3b99d9;
   text-decoration: underline;
+}
+.footer-link-2 {
+  color: #9e9e9e;
 }
 html.w-mod-js *[data-ix="fade-in-bottom-page-loads"] {
   opacity: 0;
