@@ -1,10 +1,11 @@
 body {
   background-color: #edeff2;
-  font-family:'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #6a859c;
   font-size: 16px;
   line-height: 20px;
 }
+
 h1 {
   margin-top: 0px;
   margin-bottom: 10px;
@@ -12,6 +13,7 @@ h1 {
   line-height: 44px;
   font-weight: 700;
 }
+
 h2 {
   margin-top: 0px;
   margin-bottom: 10px;
@@ -21,6 +23,7 @@ h2 {
   font-weight: 300;
   text-align: center;
 }
+
 h3 {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -31,6 +34,7 @@ h3 {
   letter-spacing: 7px;
   text-transform: uppercase;
 }
+
 h4 {
   display: block;
   margin-top: 0px;
@@ -39,6 +43,7 @@ h4 {
   line-height: 24px;
   font-weight: 600;
 }
+
 h5 {
   margin-top: 0px;
   margin-bottom: 20px;
@@ -49,6 +54,7 @@ h5 {
   letter-spacing: 4px;
   text-transform: uppercase;
 }
+
 h6 {
   margin-top: 0px;
   margin-bottom: 10px;
@@ -56,6 +62,7 @@ h6 {
   line-height: 18px;
   font-weight: 700;
 }
+
 p {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -65,6 +72,7 @@ p {
   line-height: 25px;
   font-weight: 300;
 }
+
 .button {
   display: inline-block;
   margin-right: 10px;
@@ -83,44 +91,54 @@ p {
   text-decoration: none;
   text-transform: uppercase;
 }
+
 .button:hover {
   background-color: #2e9dff;
 }
+
 .button.w--current {
   background-color: #2e80b6;
 }
+
 .button.full-width {
   display: block;
   width: 100%;
   margin-right: 0px;
   margin-left: 0px;
 }
+
 .button.tab {
   margin-right: 8px;
   margin-left: 8px;
   background-color: #92a0ad;
 }
+
 .button.tab:hover {
   background-color: #2e80b6;
 }
+
 .button.tab.w--current {
   background-color: #2e80b6;
 }
+
 .navigation-link {
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   color: #676770;
 }
+
 .navigation-link:hover {
   color: #2e9dff;
 }
+
 .navigation-bar {
   background-color: white;
 }
+
 .brand-text {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-family:'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #69b9ff;
   font-size: 25px;
   line-height: 25px;
@@ -128,22 +146,27 @@ p {
   letter-spacing: 4px;
   text-transform: uppercase;
 }
+
 .brand-link {
   padding-top: 16px;
   padding-bottom: 16px;
 }
+
 .section {
   position: relative;
   padding: 80px 10px;
   background-color: white;
   text-align: center;
 }
+
 .section.accent {
-  background-color: #192024;
+  background-color: #2d3e4f;
 }
+
 .section.pioneers-heading {
   padding-bottom: 33px;
 }
+
 .white-box {
   padding: 15px;
   border: 1px solid #dcebf7;
@@ -151,14 +174,21 @@ p {
   background-color: white;
   text-align: center;
 }
+
 .white-box.transparent {
   border-style: none;
   background-color: transparent;
 }
+
+.white-box.transparent.acitve-essex {
+  padding-top: 0px;
+}
+
 .hero-section {
   padding-top: 242px;
   padding-bottom: 242px;
 }
+
 .hero-section.centered {
   padding-top: 195px;
   padding-bottom: 195px;
@@ -169,6 +199,7 @@ p {
   background-size: auto, cover;
   text-align: center;
 }
+
 .hero-heading {
   margin-bottom: 30px;
   color: white;
@@ -178,6 +209,7 @@ p {
   letter-spacing: 4px;
   text-transform: uppercase;
 }
+
 .hero-subheading {
   margin-bottom: 40px;
   color: white;
@@ -188,6 +220,7 @@ p {
   text-transform: uppercase;
   text-shadow: black 1px 1px 6px;
 }
+
 .hollow-button {
   display: inline-block;
   margin-right: 10px;
@@ -205,26 +238,36 @@ p {
   text-decoration: none;
   text-transform: uppercase;
 }
+
 .hollow-button:hover {
   border-color: #2e9dff;
   color: #2e9dff;
 }
+
 .hollow-button.all-caps {
   text-transform: uppercase;
 }
+
 .hollow-button.all-caps.technology-button {
   border-style: none;
   background-color: #0098ff;
 }
+
 .hollow-button.all-caps.technology-button:hover {
   border-style: none;
   color: #192024;
   font-weight: 300;
 }
+
+.hollow-button.all-caps.landing-page {
+  margin-top: 28px;
+}
+
 .section-heading {
   margin-top: 0px;
   margin-bottom: 16px;
 }
+
 .section-heading.centered {
   color: #676770;
   font-size: 30px;
@@ -233,9 +276,11 @@ p {
   letter-spacing: 5px;
   text-transform: uppercase;
 }
+
 .section-heading.centered.white {
   color: white;
 }
+
 .section-subheading.center {
   color: #8e8e9c;
   font-size: 18px;
@@ -245,13 +290,16 @@ p {
   letter-spacing: 3px;
   text-transform: uppercase;
 }
+
 .section-subheading.center.off-white {
   padding-bottom: 0px;
   color: #e8e8e8;
 }
+
 .section-title-group {
   margin-bottom: 24px;
 }
+
 .form-field {
   height: 45px;
   margin-bottom: 17px;
@@ -259,13 +307,16 @@ p {
   border-radius: 3px;
   box-shadow: rgba(64, 64, 71, 0.29) 0px 0px 0px 1px;
 }
+
 .form-field.text-area {
   height: 110px;
 }
+
 .footer {
   padding-top: 35px;
   padding-bottom: 35px;
 }
+
 .footer.center {
   padding: 15px;
   border-top: 1px solid #dbdbdb;
@@ -273,12 +324,14 @@ p {
   color: #9e9e9e;
   text-align: center;
 }
+
 .footer-text {
   margin-top: 64px;
   margin-bottom: 5px;
   color: #9e9e9e;
   font-size: 12px;
 }
+
 .grid-image {
   display: block;
   width: 35%;
@@ -289,9 +342,11 @@ p {
   background-color: #69b9ff;
   box-shadow: #2e9dff 0px 0px 0px 1px;
 }
+
 .info-icon {
   float: left;
 }
+
 .footer-link {
   display: block;
   margin-bottom: 6px;
@@ -302,30 +357,38 @@ p {
   font-weight: 300;
   text-decoration: none;
 }
+
 .footer-link:hover {
   color: rgba(0, 140, 255, 0.84);
 }
+
 .footer-link.with-icon {
   margin-left: 30px;
 }
+
 .tab-menu {
   margin-bottom: 40px;
   text-align: center;
 }
+
 .tabs-wrapper {
   text-align: center;
 }
+
 .fullwidth-image {
   width: 100%;
   margin-bottom: 20px;
 }
+
 .white-text {
   margin-bottom: 20px;
   color: white;
 }
+
 .form {
   margin-top: 40px;
 }
+
 .join-us-head-image {
   display: block;
   max-width: none;
@@ -333,6 +396,7 @@ p {
   padding-top: 195px;
   padding-bottom: 195px;
 }
+
 .join-us-hero-image {
   padding-top: 217px;
   background-image: url('../images/Depositphotos_10934355_sm.jpg');
@@ -340,44 +404,71 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .pioneers-section-grey {
-  display: inline-block;
+  display: block;
   border-style: none;
 }
+
 .pioneers-section-white {
-  display: inline-block;
+  display: block;
   border: 0px none transparent;
   background-color: white;
 }
+
 .pioneer-row {
   display: block;
   margin-top: 15px;
   margin-bottom: 15px;
+  padding-top: 0px;
 }
+
+.pioneer-row.white {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 .pioneer-logo {
-  padding-top: 16px;
   text-align: center;
 }
+
 .pioneer-logo-container {
   height: 125px;
+  font-size: 0px;
+  line-height: 125px;
   text-align: center;
 }
+
 .cta-section {
   background-color: #69b9ff;
 }
+
 .cta {
   margin-top: 20px;
   margin-bottom: 20px;
   color: white;
 }
+
 .pioneer_image {
   display: block;
-  height: 93px;
+  height: 94px;
   padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: 0px;
+  line-height: 94px;
 }
+
+.pioneer_image.mlp {
+  margin-top: -17px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .sportlabs-image {
   padding-top: 14px;
 }
+
 .technology-hero-image {
   height: auto;
   padding-top: 217px;
@@ -386,6 +477,7 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .pioneers-hero-image {
   padding-top: 217px;
   background-image: url('../images/pioneers_small.jpg');
@@ -394,90 +486,93 @@ p {
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
+
 .footer-open-licence-link {
   color: white;
 }
+
 .footer-open-licence-link:hover {
   color: #3b99d9;
 }
+
 .icon-attribution {
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 0px;
   font-size: 10px;
 }
+
 ._2nd-row {
   margin-top: 19px;
   padding-right: 125px;
   padding-left: 125px;
 }
+
 .pioneer-links-div {
   display: inline-block;
   padding-left: 0px;
 }
+
 .pioneers-link-image {
   margin-left: 0px;
   padding: 0px 11px 0px 0px;
   text-align: center;
 }
+
 .pioneers-h4-heading {
   display: inline-block;
 }
+
 .join-cta {
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
   color: white;
   text-decoration: none;
 }
+
 .join-cta:hover {
   color: #3b99d9;
   text-decoration: underline;
 }
+
 .footer-link-2 {
   color: #9e9e9e;
 }
+
 html.w-mod-js *[data-ix="fade-in-bottom-page-loads"] {
   opacity: 0;
-  -webkit-transform: translate(0px, 50px);
-  -ms-transform: translate(0px, 50px);
-  transform: translate(0px, 50px);
 }
+
 html.w-mod-js *[data-ix="fade-in-left-scroll-in"] {
   opacity: 0;
-  -webkit-transform: translate(-50px, 0px);
-  -ms-transform: translate(-50px, 0px);
-  transform: translate(-50px, 0px);
 }
+
 html.w-mod-js *[data-ix="fade-in-right-scroll-in"] {
   opacity: 0;
-  -webkit-transform: translate(50px, 0px);
-  -ms-transform: translate(50px, 0px);
-  transform: translate(50px, 0px);
 }
+
 html.w-mod-js *[data-ix="fade-in-top-scroll-in"] {
   opacity: 0;
-  -webkit-transform: translate(0px, -50px);
-  -ms-transform: translate(0px, -50px);
-  transform: translate(0px, -50px);
 }
+
 html.w-mod-js *[data-ix="fade-in-bottom-scroll-in"] {
   opacity: 0;
-  -webkit-transform: translate(0px, 50px);
-  -ms-transform: translate(0px, 50px);
-  transform: translate(0px, 50px);
 }
+
 html.w-mod-js *[data-ix="bounce-in-scroll-in"] {
   opacity: 0;
-  -webkit-transform: scale(0.6000000000000001);
-  -ms-transform: scale(0.6000000000000001);
-  transform: scale(0.6000000000000001);
+  -webkit-transform: scale(0.6000000000000001, 0.6000000000000001);
+  -ms-transform: scale(0.6000000000000001, 0.6000000000000001);
+  transform: scale(0.6000000000000001, 0.6000000000000001);
 }
+
 html.w-mod-js *[data-ix="scale-on-scroll"] {
   opacity: 0;
-  -webkit-transform: scale(0.01);
-  -ms-transform: scale(0.01);
-  transform: scale(0.01);
+  -webkit-transform: scale(0.01, 0.01);
+  -ms-transform: scale(0.01, 0.01);
+  transform: scale(0.01, 0.01);
 }
+
 @media (max-width: 991px) {
   h3 {
     letter-spacing: 3px;
@@ -494,6 +589,9 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   .navigation-menu {
     background-color: #3b99d9;
   }
+  .white-box.transparent.mlp {
+    padding-top: 6px;
+  }
   .hero-section.centered {
     padding-top: 144px;
     padding-bottom: 144px;
@@ -505,10 +603,14 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   .pioneer-logo {
     margin-top: 4px;
   }
+  .pioneer_image.mlp {
+    margin-top: 0px;
+  }
   .pioneers-hero-image {
     background-position: 50% 65%;
   }
 }
+
 @media (max-width: 767px) {
   h3 {
     letter-spacing: 7px;
@@ -558,7 +660,11 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
     background-position: 50% 80%;
     background-size: cover;
   }
+  .button-column {
+    text-align: center;
+  }
 }
+
 @media (max-width: 479px) {
   h3 {
     letter-spacing: 6px;

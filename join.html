@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Fri Oct 30 2015 02:54:51 GMT+0000 (UTC) -->
+<!-- Last Published: Tue Dec 22 2015 02:59:08 GMT+0000 (UTC) -->
 <html data-wf-site="561f5b37cddcd5dc0151e6c7" data-wf-page="561f5b3734f6c8dc015d1155">
 <head>
   <meta charset="utf-8">
@@ -33,9 +33,9 @@
   </script>
 </head>
 <body>
-  <div class="w-nav navigation-bar" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
-    <div class="w-container"><a class="w-nav-brand brand-link" href="index.html"><h1 class="brand-text">openactive</h1></a>
-      <nav class="w-nav-menu navigation-menu" role="navigation"><a class="w-nav-link navigation-link" href="index.html">Home</a><a class="w-nav-link navigation-link" href="technology.html">Technology</a><a class="w-nav-link navigation-link" href="pioneers.html">Pioneers</a><a class="w-nav-link navigation-link" href="join.html">Join</a>
+  <div data-collapse="medium" data-animation="default" data-duration="400" data-contain="1" class="w-nav navigation-bar">
+    <div class="w-container"><a href="index.html" class="w-nav-brand brand-link"><h1 class="brand-text">openactive</h1></a>
+      <nav role="navigation" class="w-nav-menu navigation-menu"><a href="index.html" class="w-nav-link navigation-link">Home</a><a href="technology.html" class="w-nav-link navigation-link">Technology</a><a href="pioneers.html" class="w-nav-link navigation-link">Pioneers</a><a href="join.html" class="w-nav-link navigation-link">Join</a>
       </nav>
       <div class="w-nav-button hamburger-button">
         <div class="w-icon-nav-menu"></div>
@@ -52,12 +52,12 @@
       </div>
       <p>We welcome all organisations to support the grassroots movement.</p>
       <div class="w-form form-wrapper">
-        <form class="form" id="email-form" name="email-form" data-name="Email Form">
-          <input class="w-input form-field" id="Name" type="text" placeholder="Enter your name..." name="Name" required="required" data-name="Name">
-          <input class="w-input form-field" id="Organisation" type="text" placeholder="Enter your organisation name..." name="Organisation" required="required" data-name="Organisation">
-          <input class="w-input form-field" id="Email" type="email" placeholder="Enter your email..." name="Email" required="required" data-name="Email">
-          <textarea class="w-input form-field text-area" id="field-2" placeholder="Message" name="field-2" data-name="Field 2"></textarea>
-          <input class="w-button button full-width" type="submit" value="GET INVOLVED" data-wait="Please wait...">
+        <form id="email-form" name="email-form" data-name="Email Form" class="form">
+          <input id="Name" type="text" placeholder="Enter your name..." name="Name" required="required" data-name="Name" class="w-input form-field">
+          <input id="Organisation" type="text" placeholder="Enter your organisation name..." name="Organisation" required="required" data-name="Organisation" class="w-input form-field">
+          <input id="Email" type="email" placeholder="Enter your email..." name="Email" required="required" data-name="Email" class="w-input form-field">
+          <textarea id="field-2" placeholder="Message" name="field-2" data-name="Field 2" class="w-input form-field text-area"></textarea>
+          <input type="submit" value="GET INVOLVED" data-wait="Please wait..." class="w-button button full-width">
         </form>
         <div class="w-form-done">
           <p>Thank you! We'll be in touch soon.</p>
@@ -79,17 +79,36 @@
           <h5>CONTACT</h5>
           <p>We'd love to hear from you. Whatever's on your mind, send us a note on <a href="mailto:hello@openactive.io">hello@openactive.io</a>
           </p>
+          <p>Want to be kept up to date on all that's happening?</p>
+          <div class="w-form email-form-wrapper">
+            <form id="email-form" name="email-form" data-name="Email Form" class="email-form">
+              <div class="w-row">
+                <div class="w-col w-col-9">
+                  <input id="email" type="email" placeholder="Enter your email address" name="email" data-name="Email" required="required" class="w-input">
+                </div>
+                <div class="w-col w-col-3 button-column">
+                  <input type="submit" value="Submit" data-wait="Please wait..." class="w-button">
+                </div>
+              </div>
+            </form>
+            <div class="w-form-done">
+              <p>Thank you! Your submission has been received!</p>
+            </div>
+            <div class="w-form-fail">
+              <p>Oops! Something went wrong while submitting the form</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="w-section footer center" alt="Creative Commons License">
+  <div alt="Creative Commons License" class="w-section footer center">
     <div class="w-container">
       <p>Supported by:</p><img width="149" src="images/odi_logo_white.png">
     </div>
     <div class="w-container">
       <div class="footer-text">
-        <a class="w-inline-block" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="images/88x31.png">
+        <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" class="w-inline-block"><img src="images/88x31.png">
         </a>
         <p class="icon-attribution">With the exception of icons and brand images, this work&nbsp;is licensed under a&nbsp;<a class="footer-link-2" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
           <br>Icons used here made by Freepik from www.flaticon.com is licensed under CC BY 3.0</p>
