@@ -541,22 +541,37 @@ p {
 
 html.w-mod-js *[data-ix="fade-in-bottom-page-loads"] {
   opacity: 0;
+  -webkit-transform: translate(0px, 50px);
+  -ms-transform: translate(0px, 50px);
+  transform: translate(0px, 50px);
 }
 
 html.w-mod-js *[data-ix="fade-in-left-scroll-in"] {
   opacity: 0;
+  -webkit-transform: translate(-50px, 0px);
+  -ms-transform: translate(-50px, 0px);
+  transform: translate(-50px, 0px);
 }
 
 html.w-mod-js *[data-ix="fade-in-right-scroll-in"] {
   opacity: 0;
+  -webkit-transform: translate(50px, 0px);
+  -ms-transform: translate(50px, 0px);
+  transform: translate(50px, 0px);
 }
 
 html.w-mod-js *[data-ix="fade-in-top-scroll-in"] {
   opacity: 0;
+  -webkit-transform: translate(0px, -50px);
+  -ms-transform: translate(0px, -50px);
+  transform: translate(0px, -50px);
 }
 
 html.w-mod-js *[data-ix="fade-in-bottom-scroll-in"] {
   opacity: 0;
+  -webkit-transform: translate(0px, 50px);
+  -ms-transform: translate(0px, 50px);
+  transform: translate(0px, 50px);
 }
 
 html.w-mod-js *[data-ix="bounce-in-scroll-in"] {
