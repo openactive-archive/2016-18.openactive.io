@@ -23,11 +23,7 @@ git config user.email "travis@openactive.org"
 # unzip
 unzip -o openactive-demonstrator.webflow.zip
 
-# (hack for now!) add a date to ensure there's always something to push!
-date > timestamp.txt
-
 git add .
 git commit -m "Deploy to GitHub Pages"
 
-git push --force --quiet "https://${GH_TOKEN}@${GH_REF}"
-
+git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" || true
