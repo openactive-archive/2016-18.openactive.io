@@ -1,4 +1,6 @@
 sudo: false
+before_script:
+  - "export TRAVIS_COMMIT_MSG=\"$(git log --format=%B -n 1 $TRAVIS_COMMIT)\""
 script: bash ./deploy.sh
 env:
   global:

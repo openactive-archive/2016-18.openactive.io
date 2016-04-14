@@ -24,6 +24,6 @@ git config user.email "travis@openactive.org"
 unzip -o openactive-demonstrator.webflow.zip
 
 git add .
-git commit -m "Deploy to GitHub Pages"
+git commit -m "CI Deploy: $TRAVIS_COMMIT_MSG"
 
 git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" || true
