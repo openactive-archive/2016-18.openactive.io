@@ -2820,12 +2820,20 @@
 	  var menuOpen = 'w--nav-menu-open';
 	  var linkOpen = 'w--nav-link-open';
 	  var ix = IXEvents.triggers;
+	  var menuSibling = $();
 
 	  // -----------------------------------
 	  // Module methods
 
 	  api.ready = api.design = api.preview = init;
-	  api.destroy = removeListeners;
+
+	  api.destroy = function() {
+	    menuSibling = $();
+	    removeListeners();
+	    if ($navbars && $navbars.length) {
+	      $navbars.each(teardown);
+	    }
+	  };
 
 	  // -----------------------------------
 	  // Private methods
@@ -2891,6 +2899,14 @@
 	    resize(i, el);
 	  }
 
+	  function teardown(i, el) {
+	    var data = $.data(el, namespace);
+	    if (data) {
+	      removeOverlay(data);
+	      $.removeData(el, namespace);
+	    }
+	  }
+
 	  function removeOverlay(data) {
 	    if (!data.overlay) return;
 	    close(data, true);
@@ -2923,7 +2939,7 @@
 	    config.easing2 = data.el.attr('data-easing2') || 'ease';
 
 	    var duration = data.el.attr('data-duration');
-	    config.duration = duration != null ? +duration : 400;
+	    config.duration = duration != null ? Number(duration) : 400;
 
 	    config.docHeight = data.el.attr('data-doc-height');
 
@@ -2953,7 +2969,7 @@
 
 	  function toggle(data) {
 	    // Debounce toggle to wait for accurate open state
-	    return _.debounce(function(evt) {
+	    return _.debounce(function() {
 	      data.open ? close(data) : open(data);
 	    });
 	  }
@@ -3049,6 +3065,7 @@
 
 	    // Add menu to overlay
 	    if (data.overlay) {
+	      menuSibling = data.menu.prev();
 	      data.overlay.show().append(data.menu);
 	    }
 
@@ -3086,7 +3103,6 @@
 	    data.button.removeClass(buttonOpen);
 	    var config = data.config;
 	    if (config.animation === 'none' || !tram.support.transform) immediate = true;
-	    var animation = config.animation;
 	    ix.outro(0, data.el[0]);
 
 	    // Stop listening for tap outside events
@@ -3123,8 +3139,8 @@
 	      data.menu.removeClass(menuOpen);
 	      data.links.removeClass(linkOpen);
 	      if (data.overlay && data.overlay.children().length) {
-	        // Move menu back to parent
-	        data.menu.appendTo(data.parent);
+	        // Move menu back to parent at the original location
+	        menuSibling.length ? data.menu.insertAfter(menuSibling) : data.menu.prependTo(data.parent);
 	        data.overlay.attr('style', '').hide();
 	      }
 
