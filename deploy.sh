@@ -12,7 +12,7 @@ mkdir out;
 cd out
 
 # get existing gh-pages
-git clone -b gh-pages "https://${GH_TOKEN}@${GH_REF}"
+git clone "https://${GH_TOKEN}@${GH_REF}"
 
 cd openactive.github.io
 
