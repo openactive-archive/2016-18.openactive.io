@@ -539,6 +539,10 @@ p {
   color: #9e9e9e;
 }
 
+.supportedby {
+  margin-left: 25px;
+}
+
 html.w-mod-js *[data-ix="fade-in-bottom-page-loads"] {
   opacity: 0;
   -webkit-transform: translate(0px, 50px);
