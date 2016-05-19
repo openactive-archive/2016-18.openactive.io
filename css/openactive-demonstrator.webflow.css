@@ -25,9 +25,8 @@ h2 {
 }
 
 h3 {
-  margin-top: 0px;
+  margin-top: 45px;
   margin-bottom: 0px;
-  color: #676770;
   font-size: 20px;
   line-height: 30px;
   font-weight: 300;
@@ -71,6 +70,10 @@ p {
   font-size: 14px;
   line-height: 25px;
   font-weight: 300;
+}
+
+a {
+  text-decoration: underline;
 }
 
 .button {
@@ -282,6 +285,7 @@ p {
 }
 
 .section-subheading.center {
+  margin-top: 45px;
   color: #8e8e9c;
   font-size: 18px;
   line-height: 26px;
@@ -300,6 +304,10 @@ p {
   margin-bottom: 24px;
 }
 
+.section-title-group.left {
+  text-align: left;
+}
+
 .form-field {
   height: 45px;
   margin-bottom: 17px;
@@ -315,6 +323,7 @@ p {
 .footer {
   padding-top: 35px;
   padding-bottom: 35px;
+  background-color: #edeff2;
 }
 
 .footer.center {
@@ -543,6 +552,24 @@ p {
   margin-left: 25px;
 }
 
+.marked.whitetext {
+  color: #e8e8e8;
+}
+
+.cg-logo {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.white {
+  background-color: transparent;
+}
+
+.whitetext {
+  color: #e8e8e8;
+}
+
 html.w-mod-js *[data-ix="fade-in-bottom-page-loads"] {
   opacity: 0;
   -webkit-transform: translate(0px, 50px);
@@ -695,7 +722,7 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
     text-align: center;
   }
   p {
-    text-align: center;
+    text-align: left;
   }
   .button {
     margin-bottom: 25px;

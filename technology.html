@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Sat Apr 16 2016 11:02:04 GMT+0000 (UTC) -->
+<!-- Last Published: Thu May 19 2016 22:51:58 GMT+0000 (UTC) -->
 <html data-wf-site="561f5b37cddcd5dc0151e6c7" data-wf-page="5626743277af1cd1426868f0">
 <head>
   <meta charset="utf-8">
@@ -31,11 +31,12 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js" type="text/javascript"></script>
 </head>
-<body>
+<body class="white">
   <div data-collapse="medium" data-animation="default" data-duration="400" data-contain="1" class="w-nav navigation-bar">
     <div class="w-container"><a href="index.html" class="w-nav-brand brand-link"><h1 class="brand-text">openactive</h1></a>
-      <nav role="navigation" class="w-nav-menu navigation-menu"><a href="index.html" class="w-nav-link navigation-link">Home</a><a href="technology.html" class="w-nav-link navigation-link">Technology</a><a href="pioneers.html" class="w-nav-link navigation-link">Pioneers</a><a href="join.html" class="w-nav-link navigation-link">Join</a>
+      <nav role="navigation" class="w-nav-menu navigation-menu"><a href="index.html" class="w-nav-link navigation-link">Home</a><a href="technology.html" class="w-nav-link navigation-link">Participate</a><a href="pioneers.html" class="w-nav-link navigation-link">Pioneers</a><a href="join.html" class="w-nav-link navigation-link">Join</a>
       </nav>
       <div class="w-nav-button hamburger-button">
         <div class="w-icon-nav-menu"></div>
@@ -43,15 +44,82 @@
     </div>
   </div>
   <div class="w-section technology-hero-image"></div>
+  <div class="w-embed">
+    <style>
+      .marked table {
+          border-collapse: separate;
+          border-spacing: 16px;
+      		text-align: left;
+       		display: block;
+          overflow-x: auto;
+      }
+      .marked th {
+      		white-space: nowrap;
+      }
+    </style>
+  </div>
   <div class="w-section section">
+    <a href="https://www.w3.org/community/openactive/" target="_blank" class="w-inline-block w-hidden-tiny cg-logo"><img src="images/back-cg-group.png">
+    </a>
+    <div class="w-embed w-hidden-tiny">
+      <a href="https://github.com/openactive/community">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png">
+      </a>
+    </div>
     <div class="w-container">
-      <div class="section-title-group">
-        <h2 class="section-heading centered">open data and open standards ARE at the heart of everything we do.</h2>
-        <div class="section-subheading center">More details AVAILABLE&nbsp;IMMINENTLY.</div>
-        <p>We are collaborating on several pilot projects to demonstrate the value of openness. More details will be published here soon.
-          <br>This conversation is open to anyone, so please do <a href="mailto:hello@openactive.io">get in touch</a> and we will gladly involve you in the ongoing discussion.
+      <div class="section-title-group left">
+        <h2 class="section-heading centered">PARTICIPATE.</h2>
+        <div class="section-subheading center">OPEN DATA AND OPEN STANDARDS ARE AT THE HEART OF EVERYTHING WE DO.</div>
+        <h3>OPEN YOUR DATA</h3>
+        <p>If you are looking for ways to open your data, the community is in the process of developing guides and materials to help. Please <a href="mailto:hello@openactive.io">get in touch</a> if you would like to get involved with this work.</p>
+        <h3>Join The Conversation</h3>
+        <p>We are collaborating on several pilot projects to demonstrate the value of openness. This conversation is open to anyone, so please do <a href="mailto:hello@openactive.io">get in touch</a> and we will gladly involve you in the ongoing discussion.
           <br>
           <br>If you think your organisation can help support the growing ecosystem, why not&nbsp;<a href="join.html">join us</a>&nbsp;to help shape the future of your sector?</p>
+      </div>
+    </div>
+  </div>
+  <div class="w-section section accent">
+    <div class="w-container">
+      <div class="section-title-group left">
+        <div class="w-embed">
+          <style>
+            /* unvisited link */
+            .whitetext a:link {
+                color: white;
+            }
+            /* visited link */
+            .whitetext a:visited {
+                color: white;
+            }
+            /* mouse over link */
+            .whitetext a:hover {
+                color: white;
+            }
+            /* selected link */
+            .whitetext a:active {
+                color: white;
+            }
+          </style>
+        </div>
+        <h2 class="section-heading centered white">The COMMUNITY</h2>
+        <div class="section-subheading center off-white">THIS IS A NOT JUST A TECHNICAL CHALLENGE, IT'S A PEOPLE CHALLENGE</div>
+        <h3 class="whitetext">Pulling together the materialS</h3>
+        <p class="whitetext">Many of us are having the same conversations, if you would like to contribute to a repository of materials and collateral we can share around open data in the sector, please <a href="mailto:hello@openactive.io">get in touch</a>.</p>
+        <h3 class="whitetext">GROWING THE NETWORK</h3>
+        <p class="whitetext">If you have access to a network of clubs or organisations, or manage a booking system that is in use by a number of organisations, please <a href="mailto:hello@openactive.io">get in touch</a>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="w-section section">
+    <div class="w-container">
+      <div class="section-title-group left">
+        <h2 class="section-heading centered">THE&nbsp;TECHNOLOGY</h2>
+        <div class="section-subheading center">If you're a bit techy, YOUR INPUT WOULD BE HUGELY APPRECIATED</div>
+        <h3>OPENACTIVE W3C COMMUNITY GROUP</h3>
+        <div id="community" class="marked"></div>
+        <h3>OPENACTIVE REALTIME PAGED DATA EXCHANGE SPECIFICATION</h3>
+        <div id="realtime-paged-data-exchange" class="marked"></div>
       </div>
     </div>
   </div>
@@ -105,5 +173,18 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script type="text/javascript" src="js/webflow.js"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  <script>
+    $(function() {
+      $(".marked").each(function() {
+        var element = $( this );
+        var id = element.attr('id');
+        console.log("HI " + id);
+        $.get( "https://raw.githubusercontent.com/openactive/" + id + "/master/README.md", function( data ) {
+          var dataSansHeader = data.replace(/[\s\S]*?\(\_SNIP\_\)[\s\S][\s\S]/,"");
+          element.html( marked(dataSansHeader) );
+        });
+      });
+    });
+  </script>
 </body>
 </html>
