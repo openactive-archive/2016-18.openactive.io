@@ -649,6 +649,13 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   .pioneer-logo {
     margin-top: 4px;
   }
+  .pioneer-logo-container {
+    display: block;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
   .pioneer_image.mlp {
     margin-top: 0px;
   }
