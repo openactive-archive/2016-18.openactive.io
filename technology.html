@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Tue May 31 2016 11:37:24 GMT+0000 (UTC) -->
+<!-- Last Published: Sun Jun 12 2016 15:35:45 GMT+0000 (UTC) -->
 <html data-wf-site="561f5b37cddcd5dc0151e6c7" data-wf-page="5626743277af1cd1426868f0">
 <head>
   <meta charset="utf-8">
@@ -34,9 +34,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js" type="text/javascript"></script>
 </head>
 <body class="white">
-  <div data-collapse="medium" data-animation="default" data-duration="400" data-contain="1" class="w-nav navigation-bar">
-    <div class="w-container"><a href="index.html" class="w-nav-brand brand-link"><h1 class="brand-text">openactive</h1></a>
-      <nav role="navigation" class="w-nav-menu navigation-menu"><a href="index.html" class="w-nav-link navigation-link">Home</a><a href="technology.html" class="w-nav-link navigation-link">Participate</a><a href="pioneers.html" class="w-nav-link navigation-link">Pioneers</a><a href="join.html" class="w-nav-link navigation-link">Join</a>
+  <div class="w-nav navigation-bar" data-animation="default" data-collapse="medium" data-contain="1" data-duration="400">
+    <div class="w-container"><a class="w-nav-brand brand-link" href="index.html"><h1 class="brand-text">openactive</h1></a>
+      <nav class="w-nav-menu navigation-menu" role="navigation"><a class="w-nav-link navigation-link" href="index.html">Home</a><a class="w-nav-link navigation-link" href="technology.html">Participate</a><a class="w-nav-link navigation-link" href="pioneers.html">Pioneers</a><a class="w-nav-link navigation-link" href="join.html">Join</a>
       </nav>
       <div class="w-nav-button hamburger-button">
         <div class="w-icon-nav-menu"></div>
@@ -59,7 +59,7 @@
     </style>
   </div>
   <div class="w-section section">
-    <a href="https://www.w3.org/community/openactive/" target="_blank" class="w-inline-block w-hidden-tiny cg-logo"><img src="images/back-cg-group.png">
+    <a class="w-inline-block w-hidden-tiny cg-logo" href="https://www.w3.org/community/openactive/" target="_blank"><img src="images/back-cg-group.png">
     </a>
     <div class="w-embed w-hidden-tiny">
       <a href="https://github.com/openactive/community">
@@ -121,9 +121,9 @@
         <h2 class="section-heading centered">THE&nbsp;TECHNOLOGY</h2>
         <div class="section-subheading center">If you're a bit techy, YOUR INPUT WOULD BE HUGELY APPRECIATED</div>
         <h3>OPENACTIVE W3C COMMUNITY GROUP</h3>
-        <div id="community" class="marked"></div>
+        <div class="marked" id="community"></div>
         <h3>OPENACTIVE REALTIME PAGED DATA EXCHANGE SPECIFICATION</h3>
-        <div id="realtime-paged-data-exchange" class="marked"></div>
+        <div class="marked" id="realtime-paged-data-exchange"></div>
       </div>
     </div>
   </div>
@@ -140,13 +140,13 @@
           </p>
           <p>Want to be kept up to date on all that's happening?</p>
           <div class="w-form email-form-wrapper">
-            <form id="email-form" name="email-form" data-name="Email Form" class="email-form">
+            <form class="email-form" data-name="Email Form" id="email-form" name="email-form">
               <div class="w-row">
                 <div class="w-col w-col-9">
-                  <input id="email" type="email" placeholder="Enter your email address" name="email" data-name="Email" required="required" class="w-input">
+                  <input class="w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Enter your email address" required="required" type="email">
                 </div>
                 <div class="w-col w-col-3 button-column">
-                  <input type="submit" value="Submit" data-wait="Please wait..." class="w-button">
+                  <input class="w-button" data-wait="Please wait..." type="submit" value="Submit">
                 </div>
               </div>
             </form>
@@ -163,11 +163,11 @@
   </div>
   <div alt="Creative Commons License" class="w-section footer center">
     <div class="w-container">
-      <p>Community chairs:</p><img width="149" src="images/odi_logo_white.png"><img width="172" src="images/IMIN-LOGO-Orange.png" class="supportedby">
+      <p>Community chairs:</p><img class="odi-logo" src="images/odi_logo_white.png" width="149"><img class="supportedby" src="images/IMIN-LOGO-Orange.png" width="172">
     </div>
     <div class="w-container">
       <div class="footer-text">
-        <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" class="w-inline-block"><img src="images/88x31.png">
+        <a class="w-inline-block" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="images/88x31.png">
         </a>
         <p class="icon-attribution">With the exception of icons and brand images, this work&nbsp;is licensed under a&nbsp;<a class="footer-link-2" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. All source code is licensed under
           <a class="footer-link-2" target="_blank" href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL v3</a>.

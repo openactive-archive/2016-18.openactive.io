@@ -460,11 +460,12 @@ a {
 
 .pioneer_image {
   display: block;
-  height: 94px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  height: 105px;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: #f0f0f0;
   font-size: 0px;
-  line-height: 94px;
+  line-height: 95px;
 }
 
 .pioneer_image.mlp {
@@ -472,6 +473,10 @@ a {
   margin-bottom: 0px;
   padding-top: 0px;
   padding-bottom: 0px;
+}
+
+.pioneer_image.text {
+  font-size: 47px;
 }
 
 .sportlabs-image {
@@ -568,6 +573,11 @@ a {
 
 .whitetext {
   color: #e8e8e8;
+}
+
+.no-link {
+  color: #6a859c;
+  text-decoration: none;
 }
 
 html.w-mod-js *[data-ix="fade-in-bottom-page-loads"] {
@@ -751,6 +761,9 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   ._2nd-row {
     padding-right: 0px;
     padding-left: 0px;
+  }
+  .odi-logo {
+    padding-bottom: 14px;
   }
 }
 
