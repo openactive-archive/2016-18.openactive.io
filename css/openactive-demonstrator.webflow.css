@@ -419,6 +419,10 @@ a {
   border-style: none;
 }
 
+.pioneers-section-grey.hidden {
+  display: none;
+}
+
 .pioneers-section-white {
   display: block;
   border: 0px none transparent;
@@ -486,19 +490,38 @@ a {
 .technology-hero-image {
   height: auto;
   padding-top: 217px;
-  background-image: url('../images/footballers_small.jpg');
-  background-position: 50% 35%;
+  background-image: url('../images/pexels-photo-88680.jpeg');
+  background-position: 50% 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.pioneers-hero-image {
+.hero-image-base {
   padding-top: 217px;
-  background-image: url('../images/pioneers_small.jpg');
+  background-image: url('../images/pexels-photo.jpg');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
+}
+
+.hero-image-base.use-data {
+  background-image: url('../images/pexels-photo.jpg');
+}
+
+.hero-image-base.pioneers {
+  background-image: url('../images/pioneers_small.jpg');
+  background-position: 0% 55%;
+}
+
+.hero-image-base.open-my-data {
+  background-image: url('../images/road-sky-sand-street.jpg');
+  background-size: cover;
+}
+
+.hero-image-base.w3c {
+  background-image: url('../images/pexels-photo-108034.jpeg');
+  background-position: 0% 50%;
 }
 
 .footer-open-licence-link {
@@ -575,9 +598,29 @@ a {
   color: #e8e8e8;
 }
 
+.whitetext.quote {
+  margin-left: 52px;
+}
+
 .no-link {
   color: #6a859c;
   text-decoration: none;
+}
+
+.tickbox {
+  width: 32px;
+  margin: 30px 10px;
+  float: left;
+}
+
+.hero-image {
+  padding-top: 217px;
+}
+
+.hero-image.use-data {
+  background-image: url('../images/pexels-photo.jpg');
+  background-position: 0px 0px;
+  background-size: 640px;
 }
 
 html.w-mod-js *[data-ix="fade-in-bottom-page-loads"] {
@@ -669,7 +712,7 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   .pioneer_image.mlp {
     margin-top: 0px;
   }
-  .pioneers-hero-image {
+  .hero-image-base {
     background-position: 50% 65%;
   }
 }
@@ -719,7 +762,7 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   .spc {
     margin-bottom: 30px;
   }
-  .pioneers-hero-image {
+  .hero-image-base {
     background-position: 50% 80%;
     background-size: cover;
   }
