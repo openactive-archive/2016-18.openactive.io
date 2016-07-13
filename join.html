@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Tue Jul 12 2016 14:22:06 GMT+0000 (UTC) -->
+<!-- Last Published: Wed Jul 13 2016 09:50:49 GMT+0000 (UTC) -->
 <html data-wf-site="561f5b37cddcd5dc0151e6c7" data-wf-page="561f5b3734f6c8dc015d1155">
 <head>
   <meta charset="utf-8">
@@ -131,6 +131,17 @@
           var dataSansHeader = data.replace(/[\s\S]*?\(\_SNIP\_\)[\s\S][\s\S]/,"");
           element.html( marked(dataSansHeader) );
         });
+      });
+    });
+    $(function() {
+      $.getJSON( "https://api.github.com/repos/openactive/activation/milestones", function( data ) {
+        /*var count = 0;
+        var base = $( "#metric-impl" );
+        $.each( data, function( key, val ) {
+          count++;
+          base.delay( 200 ).text(count);
+        });*/
+        $( "#metric-impl" ).text(data.length)
       });
     });
   </script>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Tue Jul 12 2016 14:22:06 GMT+0000 (UTC) -->
+<!-- Last Published: Wed Jul 13 2016 09:50:49 GMT+0000 (UTC) -->
 <html data-wf-site="561f5b37cddcd5dc0151e6c7" data-wf-page="561f6abe3a87fedb0179b19d">
 <head>
   <meta charset="utf-8">
@@ -419,7 +419,7 @@
         </div>
       </div>
       <div class="w-col w-col-10">
-        <h4 class="w-hidden-small w-hidden-tiny"><a href="https://v1.bookwhen.com/" target="_blank">Bookwhen</a></h4>
+        <h4 class="w-hidden-small w-hidden-tiny"><a target="_blank" href="https://v1.bookwhen.com/">Bookwhen</a></h4>
         <p>Bookwhen makes it easy to take online registrations and payments for events, workshops, classes, or courses. The web based app is as well suited to ongoing or recurring events as it is to large one-off events. Payments can be taken for bookings without incurring any booking fees.</p>
       </div>
     </div>
@@ -443,7 +443,7 @@
         </div>
       </div>
       <div class="w-col w-col-10">
-        <h4 class="w-hidden-small w-hidden-tiny"><a href="https://plexus.support/" target="_blank">Grace</a></h4>
+        <h4 class="w-hidden-small w-hidden-tiny"><a target="_blank" href="https://plexus.support/">Grace</a></h4>
         <p>Grace, a messaging platform providing people with five minutes a day to reflect. It uses our self-developed approach, drawing upon research from the NHS and Cabinet Office, &nbsp;in which users follow three simple steps of reflection, review and learn to understand and improve their mental wellbeing.</p>
       </div>
     </div>
@@ -455,7 +455,7 @@
         </div>
       </div>
       <div class="w-col w-col-10">
-        <h4 class="w-hidden-small w-hidden-tiny"><a href="https://www.britishorienteering.org.uk/" target="_blank">British Orienteering</a></h4>
+        <h4 class="w-hidden-small w-hidden-tiny"><a target="_blank" href="https://www.britishorienteering.org.uk/">British Orienteering</a></h4>
         <p>Wherever we stage orienteering people flock to take part and our mission is to create more opportunities for people of all abilities to enjoy orienteering. Making our event and activities information open source is a key part of our plans to make our sport more accessible.</p>
       </div>
     </div>
@@ -479,7 +479,7 @@
         </div>
       </div>
       <div class="w-col w-col-10">
-        <h4 class="w-hidden-small w-hidden-tiny"><a href="http://www.londonathletics.org/" target="_blank">London Athletics</a></h4>
+        <h4 class="w-hidden-small w-hidden-tiny"><a target="_blank" href="http://www.londonathletics.org/">London Athletics</a></h4>
         <p>London Athletics (The local England Athletics delivery team in London) develops grassroots athletics, supporting affiliated clubs to prosper, developing more and better coaches, recruiting and supporting volunteers and officials. As the National Governing Body for the sport, England Athletics provides and supports competition opportunities at an international (England representative), national, area and county level.</p>
       </div>
     </div>
@@ -562,6 +562,17 @@
           var dataSansHeader = data.replace(/[\s\S]*?\(\_SNIP\_\)[\s\S][\s\S]/,"");
           element.html( marked(dataSansHeader) );
         });
+      });
+    });
+    $(function() {
+      $.getJSON( "https://api.github.com/repos/openactive/activation/milestones", function( data ) {
+        /*var count = 0;
+        var base = $( "#metric-impl" );
+        $.each( data, function( key, val ) {
+          count++;
+          base.delay( 200 ).text(count);
+        });*/
+        $( "#metric-impl" ).text(data.length)
       });
     });
   </script>

@@ -166,8 +166,18 @@ a {
   background-color: #2d3e4f;
 }
 
+.section.accent.metrics {
+  border-bottom: 4px solid #69b9ff;
+}
+
 .section.pioneers-heading {
   padding-bottom: 33px;
+}
+
+.section.metrics {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid #69b9ff;
 }
 
 .white-box {
@@ -193,8 +203,8 @@ a {
 }
 
 .hero-section.centered {
-  padding-top: 195px;
-  padding-bottom: 195px;
+  padding-top: 95px;
+  padding-bottom: 95px;
   border-bottom: 4px solid #69b9ff;
   background-image: -webkit-linear-gradient(270deg, rgba(46, 157, 255, .5), rgba(46, 157, 255, .22)), url('../images/running-573762_1280.jpg');
   background-image: linear-gradient(180deg, rgba(46, 157, 255, .5), rgba(46, 157, 255, .22)), url('../images/running-573762_1280.jpg');
@@ -621,6 +631,27 @@ a {
   background-image: url('../images/pexels-photo.jpg');
   background-position: 0px 0px;
   background-size: 640px;
+}
+
+.metricsheading {
+  margin-top: 0px;
+  padding-left: 7px;
+}
+
+.metricnumber {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 70px;
+}
+
+.nonlink {
+  color: #6a859c;
+  text-decoration: none;
+}
+
+.metricheading {
+  margin-bottom: 0px;
+  font-size: 10px;
 }
 
 html.w-mod-js *[data-ix="fade-in-bottom-page-loads"] {

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Tue Jul 12 2016 14:22:06 GMT+0000 (UTC) -->
+<!-- Last Published: Wed Jul 13 2016 09:50:49 GMT+0000 (UTC) -->
 <html data-wf-site="561f5b37cddcd5dc0151e6c7" data-wf-page="577f711d2c324421262a224e">
 <head>
   <meta charset="utf-8">
@@ -51,7 +51,7 @@
         <h2 class="centered section-heading">AdVOCACY.</h2>
         <div class="center section-subheading">SPREAD THE WORD. ENCOURAGE INNOVATION. TACKLE INACTIVITY.</div>
         <h3>SHARE THE MESSAGE</h3>
-        <p>The Openactive message can be freely and easily shared by anyone, whether they are a Pioneer or not. The content here is all openly licensed, so you are free to share, edit and re-use it in any way you see fit. The materials below are designed to help those who see the benefits of open data in our sector spread the word and work of the community and move our sector forward.</p>
+        <p>The Openactive message can be freely and easily shared by anyone, whether they are a Pioneer or not. The content here is all openly licensed, so you are free to share, edit and re-use it in any way you see fit (just make sure you keep the OPENACTIVE.IO&nbsp;attribution intact). The materials below are designed to help those who see the benefits of open data in our sector spread the word and work of the community and move our sector forward.</p>
         <h3>CONTRIBUTiON WELCOME</h3>
         <p>Please feel free to comment on the slides provided on this page, we are always trying to make the content clearer and more concise.</p>
         <p>Many of us are having the same conversations, if you would like to contribute to a repository of materials and collateral explaining open data in the sector, please&nbsp;<a href="join.html">get in touch</a>.</p>
@@ -84,12 +84,12 @@
         <h2 class="centered section-heading white">The SLIDES</h2>
         <div class="center off-white section-subheading">A FEW PIXELS ARE WORth A thoUSAND WORDS.</div>
         <h3 class="whitetext">THE SHORT VERSION</h3>
-        <p class="whitetext">This presentation is best used for phone calls, or as a quick refresher at the beginning of a meeting. You can <a target="_blank" href="https://docs.google.com/presentation/d/1IsKpNM0mIH3Vd6uw1DrUtqbIoMCNzezVB5VJLIGbnig/edit#slide=id.g12f9259c93_0_5">comment on these slides and download them in different formats</a>.</p>
+        <p class="whitetext">This presentation is best used for phone calls, or as a quick refresher at the beginning of a meeting. You can <a target="_blank" href="https://docs.google.com/presentation/d/1IsKpNM0mIH3Vd6uw1DrUtqbIoMCNzezVB5VJLIGbnig/edit#slide=id.g12f9259c93_0_5">comment on these slides and download them in different formats</a>. Feel free to use extracts from the deck too, just make sure you keep the OPENACTIVE.IO attribution intact.</p>
         <div class="w-embed w-iframe">
           <iframe src="https://docs.google.com/presentation/d/1IsKpNM0mIH3Vd6uw1DrUtqbIoMCNzezVB5VJLIGbnig/embed?start=false&loop=false" frameborder="0" width="940" height="557" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
         </div>
         <h3 class="whitetext">The LONG VERSION</h3>
-        <p class="whitetext">This presentation is best used in meetings where there is more time available and more detail necessary. &nbsp;We welcome your thoughts on which slides you think are particularly useful and others less so. Most discussions do not actually require every slide, but it can be useful to jump to the relevant slides depending on the conversation. You can <a target="_blank" href="https://docs.google.com/presentation/d/1Ib8zRvAWj5AcacH9y-u3cKd8qN2XyiL6VirfbCI5Hs0/edit#slide=id.g12f9259c93_0_5">download or comment on these slides</a>, remix, and edit them as required.</p>
+        <p class="whitetext">This presentation is best used in meetings where there is more time available and more detail necessary. &nbsp;We welcome your thoughts on which slides you think are particularly useful and others less so. Most discussions do not actually require every slide, but it can be useful to jump to the relevant slides depending on the conversation. You can <a target="_blank" href="https://docs.google.com/presentation/d/1Ib8zRvAWj5AcacH9y-u3cKd8qN2XyiL6VirfbCI5Hs0/edit#slide=id.g12f9259c93_0_5">download or comment on these slides</a>, remix, and edit them as required, just make sure you keep the OPENACTIVE.IO attribution intact.</p>
       </div>
       <div class="w-embed w-iframe">
         <iframe src="https://docs.google.com/presentation/d/1Ib8zRvAWj5AcacH9y-u3cKd8qN2XyiL6VirfbCI5Hs0/embed?start=false&loop=false" frameborder="0" width="940" height="557" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
@@ -157,6 +157,17 @@
           var dataSansHeader = data.replace(/[\s\S]*?\(\_SNIP\_\)[\s\S][\s\S]/,"");
           element.html( marked(dataSansHeader) );
         });
+      });
+    });
+    $(function() {
+      $.getJSON( "https://api.github.com/repos/openactive/activation/milestones", function( data ) {
+        /*var count = 0;
+        var base = $( "#metric-impl" );
+        $.each( data, function( key, val ) {
+          count++;
+          base.delay( 200 ).text(count);
+        });*/
+        $( "#metric-impl" ).text(data.length)
       });
     });
   </script>
