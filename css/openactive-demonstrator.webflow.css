@@ -170,6 +170,13 @@ a {
   border-bottom: 4px solid #69b9ff;
 }
 
+.section.accent.presslogos {
+  display: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 4px none #69b9ff;
+}
+
 .section.pioneers-heading {
   padding-bottom: 33px;
 }
@@ -441,9 +448,8 @@ a {
 
 .pioneer-row {
   display: block;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding-top: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .pioneer-row.white {
@@ -652,6 +658,12 @@ a {
 .metricheading {
   margin-bottom: 0px;
   font-size: 10px;
+}
+
+.presslogo {
+  height: 50px;
+  font-size: 0px;
+  line-height: 50px;
 }
 
 html.w-mod-js *[data-ix="fade-in-bottom-page-loads"] {

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Wed Jul 13 2016 09:50:49 GMT+0000 (UTC) -->
+<!-- Last Published: Tue Jul 19 2016 20:36:07 GMT+0000 (UTC) -->
 <html data-wf-site="561f5b37cddcd5dc0151e6c7" data-wf-page="5782b8f74a3a560c48f36808">
 <head>
   <meta charset="utf-8">
@@ -44,44 +44,43 @@
       </div>
     </div>
   </div>
-  <div class="hero-image-base use-data w-section"></div>
-  <div class="pioneers-heading section w-section">
+  <div class="hero-image-base use-data"></div>
+  <div class="pioneers-heading section">
     <div class="w-container">
       <div class="section-title-group">
-        <h2 class="centered section-heading">USE DAtA.</h2>
+        <h2 class="centered section-heading">Use Data.</h2>
         <div class="center section-subheading">THE PIONEERS ARE HARD AT WORK OPENING THEIR DATA. WATCH THIS SPACE.</div>
       </div>
     </div>
   </div>
-  <div class="pioneers-section-grey w-section">
-    <div class="pioneer-row w-row">
+  <div class="w-embed w-script">
+    <script>
+      /* MAKE SOME MAGIC */
+    </script>
+    <style>
+      .pioneer-row:nth-child(even) {background: #edeff2}
+      .pioneer-row:nth-child(odd) {background: #FFFFFF}
+      .pioneer-logo {
+        max-width: 230px;
+        max-height: 80px;
+      }
+    </style>
+  </div>
+  <div class="pioneers-section-grey" id="pioneers-section-list">
+    <div class="pioneer-row w-row" id="use-data-template">
       <div class="w-col w-col-2">
         <div class="pioneer-logo-container w-container">
-          <a class="w-inline-block" href="https://goodgym-oa.github.io/"><img class="pioneer-logo" src="images/goodgym logo 2.png" width="190">
+          <a class="w-inline-block" data-field="link" href="https://goodgym-oa.github.io/"><img class="pioneer-logo" data-field="image" src="images/loading_icon.gif">
           </a>
         </div>
       </div>
       <div class="w-col w-col-10">
-        <h4 class="w-hidden-small w-hidden-tiny"><a href="https://goodgym-oa.github.io/">GoodGym Sessions</a></h4>
-        <p>Session data from the www.goodgym.org site; published using Openactive RPDE v0.2.3.</p>
+        <h4 class="w-hidden-small w-hidden-tiny"><a data-field="title link">Loading...</a></h4>
+        <p data-field="description"></p>
       </div>
     </div>
   </div>
-  <div class="pioneers-section-white w-section">
-    <div class="pioneer-row w-row white">
-      <div class="w-col w-col-2">
-        <div class="pioneer-logo-container w-container">
-          <a class="w-inline-block" href="http://data.goskyride.com/"><img class="pioneer-logo" height="80" src="images/BritishCyclinglogo.PNG">
-          </a>
-        </div>
-      </div>
-      <div class="w-col w-col-10">
-        <h4 class="pioneers-h4-heading w-hidden-small w-hidden-tiny"><a href="http://data.goskyride.com/">British Cycling Sky Ride Sessions</a></h4>
-        <p>Session data from the goskyride.com site; published using Openactive RPDE v0.2.3.</p>
-      </div>
-    </div>
-  </div>
-  <div class="hidden pioneers-section-grey w-section">
+  <div class="hidden pioneers-section-grey">
     <div class="pioneer-row w-row">
       <div class="w-col w-col-2">
         <div class="pioneer-logo-container w-container"><img class="pioneer-logo" src="images/TableTennis.png" width="190">
@@ -93,12 +92,12 @@
       </div>
     </div>
   </div>
-  <div class="cta-section w-section">
+  <div class="cta-section">
     <div class="w-container">
       <h2 class="cta"><a class="join-cta" href="join.html">Join In Today</a></h2>
     </div>
   </div>
-  <div class="footer w-section">
+  <div class="footer">
     <div class="w-container">
       <div class="w-row">
         <div class="spc w-col w-col-6">
@@ -132,7 +131,7 @@
       </div>
     </div>
   </div>
-  <div alt="Creative Commons License" class="center footer w-section">
+  <div alt="Creative Commons License" class="center footer">
     <div class="w-container">
       <p>Community chairs:</p><img class="odi-logo" src="images/odi_logo_white.png" width="149"><img class="supportedby" src="images/IMIN-LOGO-Orange.png" width="172">
     </div>
@@ -150,6 +149,82 @@
   <script type="text/javascript" src="js/webflow.js"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
   <script>
+    function loadJSON(url, cb) {
+        $.support.cors = true;
+        $.getJSON(url, function(data) {
+            cb(data);
+        }).fail(function( jqxhr, textStatus, error ) {
+        	var err = textStatus + ", " + error;
+        	console.log( "Error accessing GitHub: " + err );
+        });
+    }
+    function gitHubGetForks(success) {
+        var url = 'https://api.github.com/repos/openactive/dataset-site-generator/forks?sort=oldest';
+        loadJSON(url, function (jsonBody) {
+            success(jsonBody);
+        });
+    }
+    function addRow(metadata) {
+      console.log("Metadata for!: " + metadata["dataset-site-url"] );
+       var newRow = $( "#use-data-template" ).clone();
+       newRow.removeAttr("id"); 
+       newRow.find( "[data-field='image']" ).attr("src", metadata["dataset-site-url"] + "images/logo.png");
+       newRow.find( "[data-field~='link']" ).attr("href", metadata["dataset-site-url"]);
+       newRow.find( "[data-field~='title']" ).text(metadata["title"]);
+       newRow.find( "[data-field='description']" ).text(metadata["description"]);
+       //Add row to list
+       newRow.appendTo( "#pioneers-section-list" );
+       newRow.show();
+    }
+    function incrementCounter(queue, counter) {
+      var url = queue.pop();
+      if (url) {
+        $.getJSON(url, function (metadata) {
+            //Only continue if load successful, ignore failure
+            console.log("Metadata for: " + metadata["dataset-site-url"] + " (Publish: " + metadata["publish"] + ")");
+            if (metadata["publish"]) {
+              counter ++;
+              $( "#metric-live" ).text(counter);
+            }
+            incrementCounter(queue, counter);
+        }).fail(function() {
+            alert("Error accessing: " + url);
+            incrementCounter(queue, counter);
+        });
+      } else {
+        // End of the list, do nothing
+      }
+    }
+    /* 
+     * On Page Load
+     */
+    $(function() {
+        $( "#use-data-template" ).each(function() {
+          $( this ).hide();
+          gitHubGetForks(function (body) {
+              for(var i = 0; i < body.length; i++) {
+                  console.log("Found: " + body[i].full_name );
+                  $.getJSON("https://raw.githubusercontent.com/" + body[i].full_name + "/master/metadata.json", function (metadata) {
+                     //Only continue if load successful, ignore failure
+                     console.log("Metadata for: " + metadata["dataset-site-url"] + " (Publish: " + metadata["publish"] + ")");
+                     if (metadata["publish"]) {
+                        addRow(metadata);
+                     }
+                  });
+              }
+          });
+        });
+        $( "#metric-live" ).each(function() {
+          gitHubGetForks(function (body) {
+              var queue = [];
+              for(var i = 0; i < body.length; i++) {
+                  console.log("Found: " + body[i].full_name );
+                  queue.push("https://raw.githubusercontent.com/" + body[i].full_name + "/master/metadata.json");
+              }
+              incrementCounter(queue, 0);
+          });
+        });
+    });
     $(function() {
       $(".marked").each(function() {
         var element = $( this );
@@ -162,14 +237,10 @@
       });
     });
     $(function() {
-      $.getJSON( "https://api.github.com/repos/openactive/activation/milestones", function( data ) {
-        /*var count = 0;
-        var base = $( "#metric-impl" );
-        $.each( data, function( key, val ) {
-          count++;
-          base.delay( 200 ).text(count);
-        });*/
-        $( "#metric-impl" ).text(data.length)
+      $( "#metric-impl" ).each(function() {
+        $.getJSON( "https://api.github.com/repos/openactive/activation/milestones", function( data ) {
+          $( "#metric-impl" ).text(data.length)
+        });
       });
     });
   </script>

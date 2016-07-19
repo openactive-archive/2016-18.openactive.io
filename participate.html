@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Wed Jul 13 2016 09:50:49 GMT+0000 (UTC) -->
+<!-- Last Published: Tue Jul 19 2016 20:36:07 GMT+0000 (UTC) -->
 <html data-wf-site="561f5b37cddcd5dc0151e6c7" data-wf-page="577f711d2c324421262a224e">
 <head>
   <meta charset="utf-8">
@@ -44,21 +44,25 @@
       </div>
     </div>
   </div>
-  <div class="technology-hero-image w-section"></div>
-  <div class="section w-section">
+  <div class="technology-hero-image"></div>
+  <div class="section">
     <div class="w-container">
       <div class="left section-title-group">
         <h2 class="centered section-heading">AdVOCACY.</h2>
         <div class="center section-subheading">SPREAD THE WORD. ENCOURAGE INNOVATION. TACKLE INACTIVITY.</div>
         <h3>SHARE THE MESSAGE</h3>
         <p>The Openactive message can be freely and easily shared by anyone, whether they are a Pioneer or not. The content here is all openly licensed, so you are free to share, edit and re-use it in any way you see fit (just make sure you keep the OPENACTIVE.IO&nbsp;attribution intact). The materials below are designed to help those who see the benefits of open data in our sector spread the word and work of the community and move our sector forward.</p>
+        <h3>sUPPOrT THE COMMUNITY</h3>
+        <p>Use the Openactive logo on your site to represent your support for Openactive. <a href="https://github.com/openactive/assets">Download or link to logos and badges here</a>. For example:</p>
+        <div class="w-embed"><img src="https://www.openactive.io/assets/openactive-logo-small.png" height="30" />
+        </div>
         <h3>CONTRIBUTiON WELCOME</h3>
         <p>Please feel free to comment on the slides provided on this page, we are always trying to make the content clearer and more concise.</p>
         <p>Many of us are having the same conversations, if you would like to contribute to a repository of materials and collateral explaining open data in the sector, please&nbsp;<a href="join.html">get in touch</a>.</p>
       </div>
     </div>
   </div>
-  <div class="accent section w-section">
+  <div class="accent section">
     <div class="w-container">
       <div class="left section-title-group">
         <div class="w-embed">
@@ -96,7 +100,7 @@
       </div>
     </div>
   </div>
-  <div class="footer w-section">
+  <div class="footer">
     <div class="w-container">
       <div class="w-row">
         <div class="spc w-col w-col-6">
@@ -130,7 +134,7 @@
       </div>
     </div>
   </div>
-  <div alt="Creative Commons License" class="center footer w-section">
+  <div alt="Creative Commons License" class="center footer">
     <div class="w-container">
       <p>Community chairs:</p><img class="odi-logo" src="images/odi_logo_white.png" width="149"><img class="supportedby" src="images/IMIN-LOGO-Orange.png" width="172">
     </div>
@@ -148,6 +152,82 @@
   <script type="text/javascript" src="js/webflow.js"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
   <script>
+    function loadJSON(url, cb) {
+        $.support.cors = true;
+        $.getJSON(url, function(data) {
+            cb(data);
+        }).fail(function( jqxhr, textStatus, error ) {
+        	var err = textStatus + ", " + error;
+        	console.log( "Error accessing GitHub: " + err );
+        });
+    }
+    function gitHubGetForks(success) {
+        var url = 'https://api.github.com/repos/openactive/dataset-site-generator/forks?sort=oldest';
+        loadJSON(url, function (jsonBody) {
+            success(jsonBody);
+        });
+    }
+    function addRow(metadata) {
+      console.log("Metadata for!: " + metadata["dataset-site-url"] );
+       var newRow = $( "#use-data-template" ).clone();
+       newRow.removeAttr("id"); 
+       newRow.find( "[data-field='image']" ).attr("src", metadata["dataset-site-url"] + "images/logo.png");
+       newRow.find( "[data-field~='link']" ).attr("href", metadata["dataset-site-url"]);
+       newRow.find( "[data-field~='title']" ).text(metadata["title"]);
+       newRow.find( "[data-field='description']" ).text(metadata["description"]);
+       //Add row to list
+       newRow.appendTo( "#pioneers-section-list" );
+       newRow.show();
+    }
+    function incrementCounter(queue, counter) {
+      var url = queue.pop();
+      if (url) {
+        $.getJSON(url, function (metadata) {
+            //Only continue if load successful, ignore failure
+            console.log("Metadata for: " + metadata["dataset-site-url"] + " (Publish: " + metadata["publish"] + ")");
+            if (metadata["publish"]) {
+              counter ++;
+              $( "#metric-live" ).text(counter);
+            }
+            incrementCounter(queue, counter);
+        }).fail(function() {
+            alert("Error accessing: " + url);
+            incrementCounter(queue, counter);
+        });
+      } else {
+        // End of the list, do nothing
+      }
+    }
+    /* 
+     * On Page Load
+     */
+    $(function() {
+        $( "#use-data-template" ).each(function() {
+          $( this ).hide();
+          gitHubGetForks(function (body) {
+              for(var i = 0; i < body.length; i++) {
+                  console.log("Found: " + body[i].full_name );
+                  $.getJSON("https://raw.githubusercontent.com/" + body[i].full_name + "/master/metadata.json", function (metadata) {
+                     //Only continue if load successful, ignore failure
+                     console.log("Metadata for: " + metadata["dataset-site-url"] + " (Publish: " + metadata["publish"] + ")");
+                     if (metadata["publish"]) {
+                        addRow(metadata);
+                     }
+                  });
+              }
+          });
+        });
+        $( "#metric-live" ).each(function() {
+          gitHubGetForks(function (body) {
+              var queue = [];
+              for(var i = 0; i < body.length; i++) {
+                  console.log("Found: " + body[i].full_name );
+                  queue.push("https://raw.githubusercontent.com/" + body[i].full_name + "/master/metadata.json");
+              }
+              incrementCounter(queue, 0);
+          });
+        });
+    });
     $(function() {
       $(".marked").each(function() {
         var element = $( this );
@@ -160,14 +240,10 @@
       });
     });
     $(function() {
-      $.getJSON( "https://api.github.com/repos/openactive/activation/milestones", function( data ) {
-        /*var count = 0;
-        var base = $( "#metric-impl" );
-        $.each( data, function( key, val ) {
-          count++;
-          base.delay( 200 ).text(count);
-        });*/
-        $( "#metric-impl" ).text(data.length)
+      $( "#metric-impl" ).each(function() {
+        $.getJSON( "https://api.github.com/repos/openactive/activation/milestones", function( data ) {
+          $( "#metric-impl" ).text(data.length)
+        });
       });
     });
   </script>
