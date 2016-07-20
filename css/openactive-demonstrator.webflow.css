@@ -171,7 +171,7 @@ a {
 }
 
 .section.accent.presslogos {
-  display: none;
+  display: block;
   padding-top: 15px;
   padding-bottom: 15px;
   border-bottom: 4px none #69b9ff;
