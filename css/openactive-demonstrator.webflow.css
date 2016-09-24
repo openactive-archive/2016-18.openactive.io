@@ -461,11 +461,20 @@ a {
   text-align: center;
 }
 
+.pioneer-logo.restricted {
+  max-height: 80px;
+  max-width: 200px;
+}
+
 .pioneer-logo-container {
   height: 125px;
   font-size: 0px;
   line-height: 125px;
   text-align: center;
+}
+
+.pioneer-logo-container.use-data {
+  text-align: right;
 }
 
 .cta-section {
@@ -666,6 +675,21 @@ a {
   line-height: 50px;
 }
 
+.logo-centered {
+  display: inline-block;
+  width: 230px;
+  text-align: center;
+}
+
+.fullscreen-logo {
+  background-color: #000;
+  background-image: url('../images/openactive-logo-large.png');
+  background-position: 50% 50%;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
 html.w-mod-js *[data-ix="fade-in-bottom-page-loads"] {
   opacity: 0;
   -webkit-transform: translate(0px, 50px);
@@ -804,6 +828,12 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   }
   .spc {
     margin-bottom: 30px;
+  }
+  .pioneer-logo-container {
+    text-align: center;
+  }
+  .pioneer-logo-container.use-data {
+    text-align: center;
   }
   .hero-image-base {
     background-position: 50% 80%;
