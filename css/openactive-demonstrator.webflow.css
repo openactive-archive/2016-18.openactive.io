@@ -134,7 +134,12 @@ a {
   color: #2e9dff;
 }
 
+.navigation-link.new {
+  padding-left: 10px;
+}
+
 .navigation-bar {
+  height: 60px;
   background-color: #fff;
 }
 
@@ -690,6 +695,11 @@ a {
   background-attachment: scroll;
 }
 
+.navbody {
+  height: 60px;
+  background-color: transparent;
+}
+
 html.w-mod-js *[data-ix="fade-in-bottom-page-loads"] {
   opacity: 0;
   -webkit-transform: translate(0px, 50px);
@@ -727,9 +737,9 @@ html.w-mod-js *[data-ix="fade-in-bottom-scroll-in"] {
 
 html.w-mod-js *[data-ix="bounce-in-scroll-in"] {
   opacity: 0;
-  -webkit-transform: scale(0.6000000000000001, 0.6000000000000001);
-  -ms-transform: scale(0.6000000000000001, 0.6000000000000001);
-  transform: scale(0.6000000000000001, 0.6000000000000001);
+  -webkit-transform: scale(0.6000000000000002, 0.6000000000000002);
+  -ms-transform: scale(0.6000000000000002, 0.6000000000000002);
+  transform: scale(0.6000000000000002, 0.6000000000000002);
 }
 
 html.w-mod-js *[data-ix="scale-on-scroll"] {
@@ -749,11 +759,17 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   .navigation-link.w--current {
     color: #fff;
   }
+  .navigation-link.new {
+    color: #6a859c;
+  }
   .hamburger-button.w--open {
     background-color: #3b99d9;
   }
   .navigation-menu {
     background-color: #3b99d9;
+  }
+  .navigation-menu.new {
+    background-color: transparent;
   }
   .white-box.transparent.mlp {
     padding-top: 6px;
