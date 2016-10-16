@@ -138,6 +138,10 @@ a {
   padding-left: 10px;
 }
 
+.navigation-link.new.pressed {
+  color: #2e9dff;
+}
+
 .navigation-bar {
   height: 60px;
   background-color: #fff;
@@ -875,6 +879,10 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   }
   .button {
     margin-bottom: 25px;
+  }
+  .navigation-link.new {
+    padding-right: 15px;
+    padding-left: 0px;
   }
   .hero-section.centered {
     padding-top: 60px;
