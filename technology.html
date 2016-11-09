@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Wed Nov 02 2016 21:48:53 GMT+0000 (UTC)  -->
-<html data-wf-page="58034e6a5ed475d20faea2aa" data-wf-site="561f5b37cddcd5dc0151e6c7">
+<!--  Last Published: Wed Nov 09 2016 01:07:08 GMT+0000 (UTC)  -->
+<html data-wf-page="580f85cc654a49247bcabbfa" data-wf-site="580f85cc654a49247bcabbe4">
 <head>
   <meta charset="utf-8">
-  <title>OpenActive Technology</title>
-  <meta content="OpenActive represents a group of organisations who share a vision for tackling the global problem of physical inactivity." name="description">
+  <title>Instructions to open your data</title>
+  <meta content="Give your activities more visibility" name="description">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/openactive-demonstrator.webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/openactive-dev-leeds.webflow.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script type="text/javascript">
     WebFont.load({
       google: {
-        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Roboto:300,regular,500"]
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Montserrat:400,700","Roboto:300,regular,500"]
       }
     });
   </script>
   <script src="js/modernizr.js" type="text/javascript"></script>
-  <link href="images/play-30619_1280.png" rel="shortcut icon" type="image/x-icon">
-  <link href="images/play-30619_1280.png" rel="apple-touch-icon">
+  <link href="images/openactive-badge-large-2_1.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/openactive-badge-large-2.png" rel="apple-touch-icon">
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-66225810-1'], ['_trackPageview']);
@@ -32,22 +32,35 @@
     })();
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js" type="text/javascript"></script>
+  <style>
+    body {
+     color: black; 
+    }
+    /* Making site wider */
+    @media screen and (min-width: 1024px) {
+      .w-container {
+        max-width: 1000px;
+      }
+    }
+    @media screen and (min-width: 1600px) {
+      .hero-section.centered {
+        padding-top: 200px;
+        padding-bottom: 200px;
+      }
+    }
+  </style>
 </head>
 <body class="white">
   <div class="navigation-bar w-nav" data-animation="default" data-collapse="medium" data-contain="1" data-duration="400">
-    <div class="w-embed w-hidden-tiny">
-      <a href="https://github.com/openactive/activation">
-        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png">
-      </a>
-    </div>
-    <div class="w-container"><a class="brand-link w-nav-brand" href="index.html"><h1 class="brand-text">openactive</h1></a>
-      <nav class="navigation-menu w-nav-menu" role="navigation"><a class="navigation-link w-nav-link" href="index.html">Home</a><a class="navigation-link w-nav-link" href="participate.html">Advocacy</a><a class="navigation-link w-nav-link" href="technology.html">Open My Data</a><a class="navigation-link w-nav-link" href="use-data.html">Use&nbsp;Data</a><a class="navigation-link w-nav-link" href="w3c-community-group.html">W3C</a><a class="navigation-link w-nav-link" href="pioneers.html">Pioneers</a><a class="navigation-link w-nav-link" href="join.html">Join</a>
+    <div class="w-container"><a class="brand-link w-nav-brand" href="index.html"><h1 class="brand-text main-logo">OpenActive</h1></a>
+      <nav class="navigation-menu w-nav-menu" role="navigation"><a class="navigation-link w-nav-link" href="index.html">Home</a><a class="navigation-link w-nav-link" href="technology.html" target="_top">Open your data</a><a class="navigation-link w-nav-link" href="use-data.html" target="_top">Use data</a><a class="navigation-link w-nav-link" href="learn.html">Learn about data</a><a class="hidden navigation-link w-nav-link" href="participate.html" target="_top">Resources</a><a class="navigation-link w-nav-link" href="w3c-community-group.html" target="_top">Data standards</a><a class="navigation-link w-nav-link" href="pioneers.html" target="_top">Who's involved?</a><a class="hidden navigation-link w-nav-link" href="ignore-template-originals/faq.html">FAQ</a><a class="navigation-link w-nav-link" href="join.html">Join us</a>
       </nav>
       <div class="hamburger-button w-nav-button">
         <div class="w-icon-nav-menu"></div>
       </div>
     </div>
   </div>
+  <a class="github-forkme w-hidden-medium w-hidden-small w-hidden-tiny w-inline-block" href="https://github.com/openactive/activation" target="_blank"></a>
   <div class="hero-image-base open-my-data"></div>
   <div class="w-embed">
     <style>
@@ -67,26 +80,25 @@
     </style>
   </div>
   <div class="section">
+    <a class="cg-logo w-hidden-tiny w-inline-block" href="https://www.w3.org/community/openactive/" target="_blank"><img src="images/back-cg-group.png">
+    </a>
     <div class="w-container">
       <div class="left section-title-group">
-        <h2 class="centered section-heading">OPEN MY DATA.</h2>
-        <div class="center section-subheading">READ THROUGH THESE OPTIONS TO FIND THE RIGHT PATH FOR YOU.</div>
-        <h3>A)&nbsp;YOU HAVE BUILT A&nbsp;BOOKING SYStem</h3>
-        <p>If you represent a booking system, or are otherwise in control of your own technology, jump straight to the <a href="#the-steps">next section</a>.</p>
-        <h3>B) YOU USE A BOOKING SYSTEM OR ARE A LEISURE OPERATOR</h3>
-        <p>To open up your data your booking system needs to be open data compatible. If you do not see the name of your booking system on the <a href="pioneers.html">Pioneers</a> page, it is unlikely to be capable of open data publishing. Help us to let your booking system provider know that this is something their customers are interested in, by <a target="_blank" href="http://goo.gl/forms/D04lFFyAdtiHQMdC2">filling out this form</a>.</p>
-        <h3>C)&nbsp;YOU CONTRACT TO OTHERS TO PROVIDe ACTIVITIES</h3>
-        <p>We are working with leisure operators to get their data open. If you do not see the name of your leisure operator on the Pioneers page, they are unlikely to be publishing open data. Help us to let your leisure operator know that this is something their customers are interested in, by <a target="_blank" href="http://goo.gl/forms/D04lFFyAdtiHQMdC2">filling out this form</a>.</p>
-        <h3>D) YOU DON'T USE A BOOKING SYSTEM</h3>
-        <p>We are working on a list of open data compatible booking systems help you to make a choice. Please do <a href="mailto:hello@openactive.io">get in touch</a> and we will let you know as soon as the list is available.</p>
-        <h3>E) YOU ARE&nbsp;GENERALLY INTERESTED IN OPEN DATA</h3>
-        <p>If you think your organisation can help support the growing ecosystem, why not&nbsp;<a href="join.html">join us</a>&nbsp;to help shape the future of your sector?</p>
+        <h2 class="centered section-heading">OPEN YOUR DATA</h2>
+        <div class="center section-subheading">GIVE YOUR ACTIVITIES MORE VISIBILITY</div>
+        <h3 class="home-header">WHY SHOULD I OPEN MY DATA? WHICH DATA?</h3>
+        <p class="home-body">We believe the most useful data for consumers is <strong>opportunity data</strong>. This is data that describes a physical activity including what it is, where and when it's taking place. Essentially, opportunity data includes enough information for a participant to decide whether an activity is right for them. Opening up this data according to a commonly agreed standard can make it easier to find and use by others. Attaching an open licence means that it can be accessed, used and shared by anyone. Personal data, for example participant names and email addresses, will never be made open.</p>
+        <p class="home-body">In the long-term, open opportunity data will help activity providers deliver a better experience and attract and retain customers. &nbsp;This will help the sector as a whole get people more active. <a href="join.html">Joining OpenActive now</a> means you can work with the ODI to shape how we get there.</p>
+        <h3 class="home-header">FIND OUT MORE</h3>
+        <p class="home-body">If you are interested in opening up your opportunity data or finding out more about it, the ODI is offering free consultations to discuss the benefits and help you do this. Please <a href="join.html">contact us</a> to find out more.</p>
+        <h3 class="home-header">HELP US SHAPE THIS</h3>
+        <p class="home-body">This guidance is evolving, and everyone is welcome to contribute. Shape the direction of this specification by joining our <a href="https://www.w3.org/community/openactive/">W3C Community Group</a> or get involved more broadly with OpenActive by <a href="join.html">getting in touch</a>.</p>
       </div>
     </div>
   </div>
   <div class="accent section" id="the-steps">
     <div class="w-container">
-      <div class="left section-title-group w-clearfix">
+      <div class="left section-title-group">
         <div class="w-embed">
           <style>
             /* unvisited link */
@@ -108,100 +120,113 @@
           </style>
         </div>
         <h2 class="centered section-heading white">The STEPS</h2>
-        <div class="center off-white section-subheading">IF YOU HAVE CONTROL OVER thE DATA AND TeCHNOLOGY.</div>
-        <h3 class="whitetext">1) BUILD YOUR OPENACTIVE API</h3>
-        <h4>(estimated time to complete: 2-3&nbsp;developer days)</h4>
-        <p class="whitetext">Give the information in the <a href="#the-technology">next section</a> to your technical team, and have them work through the details of opening up your session data according to the OpenActive specification. Instruct them to include as many fields as possible, including images and video content if available. Also instruct them to make use of the <a target="_blank" href="https://github.com/openactive/activation">Activation Issue Tracker</a> to reduce uncertainty in their work by posting an example to the community to check their assumptions early. Note this is usually an additional API to any that you may already have, and should be simple to implement</p>
-        <h3 class="whitetext">2)&nbsp;CHOOSE A LICENSE</h3>
-        <h4>(estimated time to complete: 5 minutes)</h4>
-        <p class="whitetext">License your data for anyone to access, use and share. Using the recommended license is low risk and represents no commitment.</p>
-        <p class="whitetext">The Open Data Institute highly recommends the&nbsp;<a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License (cc-by) version 4</a>&nbsp;for data published by the OpenActive community. The license is the most common in use for publishing open data, and importantly version 4 includes specific provision for database rights. Generic&nbsp;<a href="https://theodi.org/guides/publishers-guide-open-data-licensing">open data licensing guidance</a> is also available.</p>
-        <p class="whitetext">If your legal department needs to be consulted, reassure them that this is the same licence that Wikipedia uses for its content, and is the most common license in use for open data published on the internet. The license can also be replaced or revoked at any time and represents no commitment from you.</p>
-        <h3 class="whitetext">3) AMEND Terms AND&nbsp;BUILD&nbsp;OPT-OUT</h3>
-        <h4>(<strong>booking systems only</strong> - estimated time to complete: 30 minutes / 1 developer day)</h4>
-        <p class="whitetext">If you <strong>do not</strong> own the data (e.g. in the case of a booking system provider), then you need to&nbsp;amend your terms and conditions to indicate that your users' sessions will be published openly. You may also give your users an option to opt-out of session publishing, while sending them an e-mail notifying them that you are turning data sharing on.</p>
-        <p class="whitetext">A simple addition to your Terms and Conditions similar to the following:</p>
-        <p class="quote whitetext"><strong>Publishing Sessions Openly</strong>
-          <br>Information about your session that is already available publicly (e.g. title, location, description, date/time, price, images) will be published as open data for anyone to access, use and share, licensed under the <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License (cc-by) version 4</a>. This gives your sessions more visibility by publishing them openly to apps and websites that will help you promote your sessions, including but not limited to those listed <a target="_blank" href="https://www.openactive.io/pioneers.html">here</a>. This will help more people find your sessions, and will not incur any additional cost to you. [You may opt-out of this free service in your settings page.]</p>
-        <p class="whitetext">A simple opt-out checkbox visible in your application as below:</p><img class="tickbox" src="images/tick.png">
-        <p class="whitetext"><strong>Publish Sessions Openly</strong>
-          <br>Information about your sessions that is already available publicly (e.g. title, location, description, date/time, price, images) is published for anyone to access, use and share. This helps more people find your sessions, by making them visible on other apps and websites such as the ones listed <a target="_blank" href="https://www.openactive.io/pioneers.html">here</a>. This does not incur any additional cost to you.</p>
-        <p class="whitetext">A simple e-mail alert similar to the following:</p>
-        <p class="quote whitetext"><strong>Publishing Sessions Openly</strong>
-          <br>We are now giving your sessions more visibility by publishing information about them that is already available publicly (e.g. title, location, description, date/time, price, images) openly to apps and websites that will help you promote your sessions, such as the ones listed <a target="_blank" href="https://www.openactive.io/pioneers.html">here</a>. This will help more people find your sessions, and will not incur any additional cost to you. If you want to opt-out of this free service, <a href="#">click here</a> to go to your settings page.</p>
-        <h3 class="whitetext">4) CREATE A&nbsp;DATASET HOMEPAGE</h3>
-        <h4>(estimated time to complete: 1.5 hours)</h4>
-        <p class="whitetext">To publish open data for anyone to freely access, use and share, you must create a webpage that describes the data you are publishing. You must include relevant human and machine readable licensing information, documentation, a mailing list, and ideally an issue tracker. You must also specify how dataset users (innovators who want to build on top of/use your data) should attribute your data.</p>
-        <p class="whitetext">The <a href="https://github.com/openactive/dataset-site-generator/wiki">Dataset Site Generator</a> includes a template site, and complete step-by-step guides designed for non-technical users, to quickly and easily create a subsite that contains all of the above. Although it is possible to do this without the generator by following the ODI guides for <a target="_blank" href="https://theodi.org/guides/marking-up-your-dataset-with-dcat">metadata</a> and <a target="_blank" href="https://theodi.org/guides/publishers-guide-to-the-open-data-rights-statement-vocabulary">rights statements</a>, we recommend using the <a href="https://github.com/openactive/dataset-site-generator/wiki">Dataset Site Generator</a> to save you time and to benefit from additional updates - it's free and open source!</p>
-        <p class="whitetext">As with all of OpenActive, your feedback would be hugely appreciated. Please create an issue on this <a target="_blank" href="https://github.com/openactive/dataset-site-generator/issues">issue tracker</a> with any feedback, or comment on the guides directly.</p>
-        <h3 class="whitetext">5) CREATE AN&nbsp;OPEN DATA CERTIFICATE</h3>
-        <h4>(estimated time to complete: 30 minutes)</h4>
-        <p class="whitetext">The Open Data Institute encourage all publishers to create an <a href="https://certificates.theodi.org/">Open Data Certificate</a> for any open data published. If your Dataset Site has been set up correctly, it should automatically populate much of the Open Data Certificate form.</p>
-      </div>
-    </div>
-  </div>
-  <div class="section" id="the-technology">
-    <a class="cg-logo w-hidden-tiny w-inline-block" href="https://www.w3.org/community/openactive/" target="_blank"><img src="images/back-cg-group.png">
-    </a>
-    <div class="w-embed w-hidden-tiny">
-      <a href="https://github.com/openactive/activation">
-        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png">
-      </a>
-    </div>
-    <div class="w-container">
-      <div class="left section-title-group">
-        <h2 class="centered section-heading">THE&nbsp;TECHNOLOGY</h2>
-        <div class="center section-subheading">THE SPECIFICATION IS OPEN, AS IS THE SUPPORT.</div>
-        <h3>A SENTENCE FOR&nbsp;YOUR TECH TEAM</h3>
-        <p>All you need to do is create a JSON endpoint that conforms to the <a href="https://github.com/openactive/realtime-paged-data-exchange/blob/master/README.md">OpenActive RTPE specification</a>.&nbsp;We recommend that you create a new endpoint for this purpose. The specification is designed to be simple to implement, take a look at the examples in the <a href="https://github.com/openactive/activation/blob/master/README.md">Activation Issue Tracker</a> to get an idea.</p>
+        <div class="center off-white section-subheading">5 STEPS TO PUBLISHING YOUR DATA</div>
+        <p class="whitetext">The steps below are designed for organisations who already have a booking system or website that lists opportunities to be active. If you do not have either of these, but would like to learn more about how to open up your data, please go to our <a href="learn.html">Learn about data</a> page, or <a href="join.html">contact us</a>.</p>
+        <h3 class="white-heading">1) BUILD YOUR OPENACTIVE API</h3>
+        <h4 class="subheading4">(estimated time to complete: 2-3&nbsp;developer days)</h4>
+        <div class="w-row">
+          <div class="join-description-parent w-col w-col-9">
+            <p class="whitetext">Send the <a href="https://github.com/openactive/realtime-paged-data-exchange/blob/master/README.md" data-rt-link-type="external">specification details</a> to your technical team, and ask them to open up your session data according to the OpenActive specification. Note this is usually an additional API to any that you may already have, and should be simple to implement. <a href="#" data-ix="show-and-hide-1" data-rt-link-type="external">See more</a>
+            </p>
+          </div>
+          <div class="join-description-parent right w-col w-col-3"><a class="button" href="https://github.com/openactive/realtime-paged-data-exchange/blob/master/README.md">VIEW SPECIFICATION</a>
+          </div>
+        </div>
+        <div class="seemore" data-ix="display-none-on-load" id="seemore1">
+          <p class="whitetext">A sentence for your tech team: “Please create a new JSON endpoint that conforms to the <a href="https://github.com/openactive/realtime-paged-data-exchange/blob/master/README.md">OpenActive RTPE specification</a>. The specification is designed to be simple to implement, take a look at the examples in the <a href="https://github.com/openactive/activation">Activation Issue Tracker</a> to get an idea.”</p>
+        </div>
+        <h3 class="white-heading">2)&nbsp;CHOOSE A LICENcE</h3>
+        <h4 class="subheading4">(estimated time to complete: 5 minutes)</h4>
+        <p class="whitetext">License your data for anyone to access, use and share. The Open Data Institute recommends the <a href="https://creativecommons.org/licenses/by/4.0/" data-rt-link-type="external">Creative Commons Attribution Licence (cc-by) version 4</a>. Inform your tech team. <a href="#" data-ix="show-and-hide-2">See more</a>
+        </p>
+        <div class="seemore2" data-ix="display-none-on-load">
+          <p class="whitetext">Using the recommended licence is low risk and represents no commitment. The cc-by licence is the most common in use for publishing open data, and importantly version 4 includes specific provision for database rights. Generic&nbsp;open data licensing guidance&nbsp;is also available.</p>
+          <p class="whitetext">Once you have selected a licence, inform your developer of your decision so that they can make the appropriate changes to the API.</p>
+          <p class="whitetext">If your legal department needs to be consulted, reassure them that this is the same licence that Wikipedia uses for its content, and is the most common licence in use for open data published on the internet. The licence can also be replaced or revoked at any time and represents no commitment from you.</p>
+        </div>
+        <h3 class="white-heading">3) AMEND Terms AND&nbsp;BUILD&nbsp;OPT-OUT</h3>
+        <h4 class="subheading4">(<strong>booking systems only</strong> - estimated time to complete: 30 minutes / 1 developer day)</h4>
+        <p class="whitetext">If you <strong>do not</strong> own the data (e.g. in the case of a booking system provider), then you need to ensure that you obtain permission to publish the data. <a href="#" data-ix="show-and-hide-3">See more</a>
+        </p>
+        <div class="seemore3 w-clearfix" data-ix="display-none-on-load">
+          <p class="whitetext">You need to&nbsp;amend your terms and conditions to indicate that your users' sessions will be published openly. You may also give your users an option to opt-out of session publishing, while sending them an e-mail notifying them that you are turning data sharing on.</p>
+          <p class="whitetext">A simple addition to your Terms and Conditions similar to the following:</p>
+          <p class="quote whitetext"><strong>Publishing Sessions Openly</strong>
+            <br>Information about your session that is already available publicly (e.g. title, location, description, date/time, price, images) will be published as open data for anyone to access, use and share, licensed under the <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License (cc-by) version 4</a>. This gives your sessions more visibility by publishing them openly to apps and websites that will help you promote your sessions, including but not limited to those listed <a target="_blank" href="https://www.openactive.io/pioneers.html">here</a>. This will help more people find your sessions, and will not incur any additional cost to you. [You may opt-out of this free service in your settings page.]</p>
+          <p class="whitetext">A simple opt-out checkbox visible in your application as below:</p><img class="tickbox" src="images/tick.png">
+          <p class="whitetext"><strong>Publish Sessions Openly</strong>
+            <br>Information about your sessions that is already available publicly (e.g. title, location, description, date/time, price, images) is published for anyone to access, use and share. This helps more people find your sessions, by making them visible on other apps and websites such as the ones listed <a target="_blank" href="https://www.openactive.io/pioneers.html">here</a>. This does not incur any additional cost to you.</p>
+          <p class="whitetext">A simple e-mail alert similar to the following:</p>
+          <p class="quote whitetext"><strong>Publishing Sessions Openly</strong>
+            <br>We are now giving your sessions more visibility by publishing information about them that is already available publicly (e.g. title, location, description, date/time, price, images) openly to <a href="pioneers.html">apps and websites that will help you promote your sessions</a>, such as the ones listed <a target="_blank" href="https://www.openactive.io/pioneers.html">here</a>. This will help more people find your sessions, and will not incur any additional cost to you. If you want to opt-out of this free service,&nbsp;<a href="#">go to your settings page</a>.</p>
+        </div>
+        <h3 class="white-heading">4) CREATE A&nbsp;DATASET HOMEPAGE</h3>
+        <h4 class="subheading4">(estimated time to complete: 1.5 hours)</h4>
+        <div class="w-row">
+          <div class="join-description-parent short w-col w-col-9">
+            <p class="whitetext">To publish open data for anyone to freely access, use and share, you must create a webpage that describes the data you are publishing. <a href="#" data-ix="show-and-hide-4">See more</a>
+            </p>
+          </div>
+          <div class="join-description-parent right short w-col w-col-3"><a class="button" href="https://github.com/openactive/dataset-site-generator/wiki">VIEW<br>GENERATOR</a>
+          </div>
+        </div>
+        <div class="seemore4" data-ix="display-none-on-load">
+          <p class="whitetext">You must also include relevant human and machine readable licensing information, documentation, a mailing list, and ideally an issue tracker. You must specify how dataset users (innovators who want to build on top of/use your data) should attribute your data.</p>
+          <p class="whitetext">The <a href="https://github.com/openactive/dataset-site-generator/wiki">Dataset Site Generator</a> includes a template site, and complete step-by-step guides designed for non-technical users, to quickly and easily create a subsite that contains all of the above. Although it is possible to do this without the generator by following the ODI guides for <a target="_blank" href="https://theodi.org/guides/marking-up-your-dataset-with-dcat">metadata</a> and <a target="_blank" href="https://theodi.org/guides/publishers-guide-to-the-open-data-rights-statement-vocabulary">rights statements</a>, we recommend using the <a href="https://github.com/openactive/dataset-site-generator/wiki">Dataset Site Generator</a> to save you time and to benefit from additional updates - it's free and open source!</p>
+          <p class="whitetext">As with all of OpenActive, your feedback would be hugely appreciated. Please create an issue on this <a target="_blank" href="https://github.com/openactive/dataset-site-generator/issues">issue tracker</a> with any feedback, or comment on the guides directly.</p>
+        </div>
+        <h3 class="white-heading">5) CREATE AN&nbsp;OPEN DATA CERTIFICATE</h3>
+        <h4 class="subheading4">(estimated time to complete: 30 minutes)</h4>
+        <p class="whitetext">The Open Data Institute encourages all publishers to create an <a href="https://certificates.theodi.org/">Open Data Certificate</a> for any open data published. If your dataset site has been set up correctly, it should automatically populate much of the Open Data Certificate form.</p>
       </div>
     </div>
   </div>
   <div class="footer">
-    <div class="w-container">
+    <div class="footercta w-container">
       <div class="w-row">
         <div class="spc w-col w-col-6">
-          <h5>about openactive</h5>
-          <p>We are a group of organisations who believe that open data will help to get more people more active, supported by the <a target="_blank" href="http://opendata.institute">Open Data Institute</a>.</p>
+          <h5 class="home-header">about openactive</h5>
+          <p class="home-body left-align">We are a group of organisations who believe that open data will help people get active, coordinated by the <a target="_blank" href="http://opendata.institute">Open Data Institute</a>.</p>
         </div>
         <div class="spc w-col w-col-6">
-          <h5>CONTACT</h5>
-          <p>We'd love to hear from you. Whatever's on your mind, send us a note on <a href="mailto:hello@openactive.io">hello@openactive.io</a>
-          </p>
-          <p>Want to be kept up to date on all that's happening?</p>
-          <div class="email-form-wrapper w-form">
-            <form class="email-form" data-name="Email Form" id="email-form" name="email-form">
-              <div class="w-row">
-                <div class="w-col w-col-9">
-                  <input class="w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Enter your email address" required="required" type="email">
+          <h5 class="home-header">CONTACT</h5>
+          <p class="home-body left-align">We'd love to hear from you. Whatever's on your mind, send us a note at <a href="mailto:hello@openactive.io">hello@openactive.io</a>.</p>
+          <div class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny">
+            <p class="home-body">Want to be kept up to date on all that's happening?</p>
+            <div class="email-form-wrapper w-form">
+              <form class="email-form" data-name="Email Form" id="email-form" name="email-form">
+                <div class="w-row">
+                  <div class="w-col w-col-9">
+                    <input class="inputfield w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Enter your email address" required="required" type="email">
+                  </div>
+                  <div class="button-column w-col w-col-3">
+                    <input class="buttonsubmit w-button" data-wait="Please wait..." type="submit" value="Submit">
+                  </div>
                 </div>
-                <div class="button-column w-col w-col-3">
-                  <input class="w-button" data-wait="Please wait..." type="submit" value="Submit">
-                </div>
+              </form>
+              <div class="w-form-done">
+                <p>Thank you! Your submission has been received!</p>
               </div>
-            </form>
-            <div class="w-form-done">
-              <p>Thank you! Your submission has been received!</p>
-            </div>
-            <div class="w-form-fail">
-              <p>Oops! Something went wrong while submitting the form</p>
+              <div class="w-form-fail">
+                <p>Oops! Something went wrong while submitting the form</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </div><a class="button button-left footer-joinus" href="join.html">JOIN US</a>
     </div>
   </div>
   <div alt="Creative Commons License" class="center footer">
     <div class="w-container">
-      <p>Supported by the Open Data Institute</p><img class="odi-logo" src="images/odi_logo_white.png" width="149">
+      <div class="footer-text">
+        <p>Supported by the <a class="footer-link-2" href="http://theodi.org/">Open Data Institute</a> and <a class="footer-link-2" href="https://www.sportengland.org/">Sport England</a>
+        </p>
+      </div><img class="odi-logo" src="images/odi_logo_white.png"><img class="odi-logo" height="64" src="images/Sport-England-Logo-White-RGB.png">
     </div>
     <div class="w-container">
       <div class="footer-text">
-        <a class="w-inline-block" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="images/88x31.png">
-        </a>
-        <p class="icon-attribution">With the exception of icons and brand images, this work&nbsp;is licensed under a&nbsp;<a class="footer-link-2" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. All source code is licensed under
-          <a class="footer-link-2" target="_blank" href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL v3</a>.
-          <br>Icons used here made by Freepik from www.flaticon.com is licensed under CC BY 3.0</p>
+        <p class="icon-attribution">With the exception of icons and images, this work&nbsp;is licensed under a&nbsp;<a class="footer-link-2" href="http://creativecommons.org/licenses/by-sa/4.0/" data-rt-link-type="external" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International Licence</a>. All source code is licensed under
+          <a class="footer-link-2" target="_blank" href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL v3</a>.<span class="hidden"> <a xmlns="http://www.w3.org/1999/xhtml" class="footer-link-2" href="http://www.flaticon.com">Icons made&nbsp;by Freepik</a>&nbsp;and are licensed under CC BY 3.0.</span>&nbsp;Photography by <a href="https://www.flickr.com/photos/astronomyblog/" class="footer-link-2">Stuart Lowe</a> (CC-BY-SA 4.0), London Sport/Greg Keegan, <a href="https://www.flickr.com/photos/pigpilot/7575753458/" class="footer-link-2">Stuart Grout</a> (CC-BY 2.0), <a href="https://www.flickr.com/photos/footfun/2469722745/" class="footer-link-2">Evan Lovely</a> (CC-BY 2.0)</p>
       </div>
     </div>
   </div>
@@ -214,8 +239,8 @@
         $.getJSON(url, function(data) {
             cb(data);
         }).fail(function( jqxhr, textStatus, error ) {
-        	var err = textStatus + ", " + error;
-        	console.log( "Error accessing GitHub: " + err );
+            var err = textStatus + ", " + error;
+            console.log( "Error accessing GitHub: " + err );
         });
     }
     function gitHubGetForks(success) {
@@ -226,14 +251,21 @@
     }
     function addRow(metadata) {
       console.log("Metadata for!: " + metadata["dataset-site-url"] );
-       var newRow = $( "#use-data-template" ).clone();
+      createRow("#data-user-section-list",
+                metadata["dataset-site-url"] + "images/logo.png",
+                metadata["dataset-site-url"],
+                metadata["title"],
+                metadata["description"]); 
+    }
+    function createRow(appendId,image,link,title,description) {
+       var newRow = $( "#row-template" ).clone();
        newRow.removeAttr("id"); 
-       newRow.find( "[data-field='image']" ).attr("src", metadata["dataset-site-url"] + "images/logo.png");
-       newRow.find( "[data-field~='link']" ).attr("href", metadata["dataset-site-url"]);
-       newRow.find( "[data-field~='title']" ).text(metadata["title"]);
-       newRow.find( "[data-field='description']" ).text(metadata["description"]);
+       newRow.find( "[data-field='image']" ).attr("src", image);
+       newRow.find( "[data-field~='link']" ).attr("href", link);
+       newRow.find( "[data-field~='title']" ).text(title);
+       newRow.find( "[data-field='description']" ).text(description);
        //Add row to list
-       newRow.appendTo( "#pioneers-section-list" );
+       newRow.appendTo( appendId );
        newRow.show();
     }
     function incrementCounter(queue, counter) {
@@ -259,8 +291,8 @@
      * On Page Load
      */
     $(function() {
-        $( "#use-data-template" ).each(function() {
-          $( this ).hide();
+        $( "#data-user-section-list" ).each(function() {
+          $( "#row-template" ).hide();
           gitHubGetForks(function (body) {
               for(var i = 0; i < body.length; i++) {
                   console.log("Found: " + body[i].full_name );
@@ -271,6 +303,29 @@
                         addRow(metadata);
                      }
                   });
+              }
+          });
+        });
+        $( "#pioneers-section-list" ).each(function() {
+          $( "#row-template" ).hide();
+          $.getJSON("https://www.openactive.io/community/community.json", function (data) {
+              //Only continue if load successful, ignore failure
+              console.log("Got community list!");
+              if (data["community"]) {
+                var map = data.community;
+                var keys = Object.keys(map);
+                var len = keys.length;
+                keys.sort();
+                for (var i = 0; i < len; i++) {
+                  var k = keys[i];
+                  var v = map[k];
+                  createRow("#pioneers-section-list",
+                    "https://www.openactive.io/community/logos/" + v.image,
+                    v.url,
+                    v.name,
+                    v.description); 
+                }
+                $( "#metric-community" ).text(len);
               }
           });
         });
@@ -298,7 +353,7 @@
     });
     $(function() {
       $( "#metric-impl" ).each(function() {
-        $.getJSON( "https://api.github.com/repos/openactive/activation/milestones?state=all", function( data ) {
+        $.getJSON( "https://api.github.com/repos/openactive/users/milestones?state=all", function( data ) {
           $( "#metric-impl" ).text(data.length)
         });
       });

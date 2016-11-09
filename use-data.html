@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Wed Nov 02 2016 21:48:53 GMT+0000 (UTC)  -->
-<html data-wf-page="58034e6a5ed475d20faea2a8" data-wf-site="561f5b37cddcd5dc0151e6c7">
+<!--  Last Published: Wed Nov 09 2016 01:07:08 GMT+0000 (UTC)  -->
+<html data-wf-page="580f85cc654a49247bcabbfd" data-wf-site="580f85cc654a49247bcabbe4">
 <head>
   <meta charset="utf-8">
-  <title>Use Data</title>
-  <meta content="OpenActive represents a group of organisations who share a vision for tackling the global problem of physical inactivity." name="description">
-  <meta content="Use Data" property="og:title">
+  <title>Open opportunity data directory, free to use and share</title>
+  <meta content="Use real-time opportunity data to build engaging experiences" name="description">
+  <meta content="Open opportunity data directory, free to use and share" property="og:title">
+  <meta content="Use real-time opportunity data to build engaging experiences" property="og:description">
+  <meta content="summary" name="twitter:card">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/openactive-demonstrator.webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/openactive-dev-leeds.webflow.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script type="text/javascript">
     WebFont.load({
       google: {
-        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Roboto:300,regular,500"]
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Montserrat:400,700","Roboto:300,regular,500"]
       }
     });
   </script>
   <script src="js/modernizr.js" type="text/javascript"></script>
-  <link href="images/play-30619_1280.png" rel="shortcut icon" type="image/x-icon">
-  <link href="images/play-30619_1280.png" rel="apple-touch-icon">
+  <link href="images/openactive-badge-large-2_1.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/openactive-badge-large-2.png" rel="apple-touch-icon">
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-66225810-1'], ['_trackPageview']);
@@ -33,28 +35,43 @@
     })();
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js" type="text/javascript"></script>
+  <style>
+    body {
+     color: black; 
+    }
+    /* Making site wider */
+    @media screen and (min-width: 1024px) {
+      .w-container {
+        max-width: 1000px;
+      }
+    }
+    @media screen and (min-width: 1600px) {
+      .hero-section.centered {
+        padding-top: 200px;
+        padding-bottom: 200px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="navigation-bar w-nav" data-animation="default" data-collapse="medium" data-contain="1" data-duration="400">
-    <div class="w-embed w-hidden-tiny">
-      <a href="https://github.com/openactive/activation">
-        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png">
-      </a>
-    </div>
-    <div class="w-container"><a class="brand-link w-nav-brand" href="index.html"><h1 class="brand-text">openactive</h1></a>
-      <nav class="navigation-menu w-nav-menu" role="navigation"><a class="navigation-link w-nav-link" href="index.html">Home</a><a class="navigation-link w-nav-link" href="participate.html">Advocacy</a><a class="navigation-link w-nav-link" href="technology.html">Open My Data</a><a class="navigation-link w-nav-link" href="use-data.html">Use&nbsp;Data</a><a class="navigation-link w-nav-link" href="w3c-community-group.html">W3C</a><a class="navigation-link w-nav-link" href="pioneers.html">Pioneers</a><a class="navigation-link w-nav-link" href="join.html">Join</a>
+    <div class="w-container"><a class="brand-link w-nav-brand" href="index.html"><h1 class="brand-text main-logo">OpenActive</h1></a>
+      <nav class="navigation-menu w-nav-menu" role="navigation"><a class="navigation-link w-nav-link" href="index.html">Home</a><a class="navigation-link w-nav-link" href="technology.html" target="_top">Open your data</a><a class="navigation-link w-nav-link" href="use-data.html" target="_top">Use data</a><a class="navigation-link w-nav-link" href="learn.html">Learn about data</a><a class="hidden navigation-link w-nav-link" href="participate.html" target="_top">Resources</a><a class="navigation-link w-nav-link" href="w3c-community-group.html" target="_top">Data standards</a><a class="navigation-link w-nav-link" href="pioneers.html" target="_top">Who's involved?</a><a class="hidden navigation-link w-nav-link" href="ignore-template-originals/faq.html">FAQ</a><a class="navigation-link w-nav-link" href="join.html">Join us</a>
       </nav>
       <div class="hamburger-button w-nav-button">
         <div class="w-icon-nav-menu"></div>
       </div>
     </div>
   </div>
+  <a class="github-forkme w-hidden-medium w-hidden-small w-hidden-tiny w-inline-block" href="https://github.com/openactive/activation" target="_blank"></a>
   <div class="hero-image-base use-data"></div>
   <div class="pioneers-heading section">
     <div class="w-container">
       <div class="section-title-group">
-        <h2 class="centered section-heading">Use Data.</h2>
-        <div class="center section-subheading">THE PIONEERS ARE HARD AT WORK OPENING THEIR DATA. WATCH THIS SPACE.</div>
+        <h2 class="centered section-heading">Use Data</h2>
+        <div class="center section-subheading">USE&nbsp;REAL-TIME OPPORTUNITY&nbsp;DATA TO build ENGAGING experiences</div>
+        <p class="home-body left-align">The data sources listed below are examples of open data from the OpenActive community, which are available to freely access, use and share. Please click on each to find out more details. The specification used to publish this data is under development and may evolve, so make sure that you join the relevant mailing list of each source that you use. To join the discussion in how these standards develop <a href="join.html" target="_blank">please get in touch</a>.</p>
+        <p class="home-body left-align">When data is made open using the instructions in <a href="technology.html">Open your data</a>, it will automatically appear here.</p>
       </div>
     </div>
   </div>
@@ -63,16 +80,17 @@
       /* MAKE SOME MAGIC */
     </script>
     <style>
-      .pioneer-row:nth-child(even) {background: #edeff2}
-      .pioneer-row:nth-child(odd) {background: #FFFFFF}
+      .pioneer-row { font-family: inherit; }
+      .pioneer-row:nth-child(even) { background: #edeff2; }
+      .pioneer-row:nth-child(odd) { background: #FFFFFF; }
       .pioneer-logo {
         max-width: 230px;
         max-height: 80px;
       }
     </style>
   </div>
-  <div class="pioneers-section-grey" id="pioneers-section-list">
-    <div class="pioneer-row w-row" id="use-data-template">
+  <div class="pioneers-section-grey" id="data-user-section-list">
+    <div class="pioneer-row w-row" id="row-template">
       <div class="w-col w-col-4">
         <div class="pioneer-logo-container use-data w-container">
           <div class="logo-centered">
@@ -105,50 +123,51 @@
     </div>
   </div>
   <div class="footer">
-    <div class="w-container">
+    <div class="footercta w-container">
       <div class="w-row">
         <div class="spc w-col w-col-6">
-          <h5>about openactive</h5>
-          <p>We are a group of organisations who believe that open data will help to get more people more active, supported by the <a target="_blank" href="http://opendata.institute">Open Data Institute</a>.</p>
+          <h5 class="home-header">about openactive</h5>
+          <p class="home-body left-align">We are a group of organisations who believe that open data will help people get active, coordinated by the <a target="_blank" href="http://opendata.institute">Open Data Institute</a>.</p>
         </div>
         <div class="spc w-col w-col-6">
-          <h5>CONTACT</h5>
-          <p>We'd love to hear from you. Whatever's on your mind, send us a note on <a href="mailto:hello@openactive.io">hello@openactive.io</a>
-          </p>
-          <p>Want to be kept up to date on all that's happening?</p>
-          <div class="email-form-wrapper w-form">
-            <form class="email-form" data-name="Email Form" id="email-form" name="email-form">
-              <div class="w-row">
-                <div class="w-col w-col-9">
-                  <input class="w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Enter your email address" required="required" type="email">
+          <h5 class="home-header">CONTACT</h5>
+          <p class="home-body left-align">We'd love to hear from you. Whatever's on your mind, send us a note at <a href="mailto:hello@openactive.io">hello@openactive.io</a>.</p>
+          <div class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny">
+            <p class="home-body">Want to be kept up to date on all that's happening?</p>
+            <div class="email-form-wrapper w-form">
+              <form class="email-form" data-name="Email Form" id="email-form" name="email-form">
+                <div class="w-row">
+                  <div class="w-col w-col-9">
+                    <input class="inputfield w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Enter your email address" required="required" type="email">
+                  </div>
+                  <div class="button-column w-col w-col-3">
+                    <input class="buttonsubmit w-button" data-wait="Please wait..." type="submit" value="Submit">
+                  </div>
                 </div>
-                <div class="button-column w-col w-col-3">
-                  <input class="w-button" data-wait="Please wait..." type="submit" value="Submit">
-                </div>
+              </form>
+              <div class="w-form-done">
+                <p>Thank you! Your submission has been received!</p>
               </div>
-            </form>
-            <div class="w-form-done">
-              <p>Thank you! Your submission has been received!</p>
-            </div>
-            <div class="w-form-fail">
-              <p>Oops! Something went wrong while submitting the form</p>
+              <div class="w-form-fail">
+                <p>Oops! Something went wrong while submitting the form</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </div><a class="button button-left footer-joinus" href="join.html">JOIN US</a>
     </div>
   </div>
   <div alt="Creative Commons License" class="center footer">
     <div class="w-container">
-      <p>Supported by the Open Data Institute</p><img class="odi-logo" src="images/odi_logo_white.png" width="149">
+      <div class="footer-text">
+        <p>Supported by the <a class="footer-link-2" href="http://theodi.org/">Open Data Institute</a> and <a class="footer-link-2" href="https://www.sportengland.org/">Sport England</a>
+        </p>
+      </div><img class="odi-logo" src="images/odi_logo_white.png"><img class="odi-logo" height="64" src="images/Sport-England-Logo-White-RGB.png">
     </div>
     <div class="w-container">
       <div class="footer-text">
-        <a class="w-inline-block" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="images/88x31.png">
-        </a>
-        <p class="icon-attribution">With the exception of icons and brand images, this work&nbsp;is licensed under a&nbsp;<a class="footer-link-2" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. All source code is licensed under
-          <a class="footer-link-2" target="_blank" href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL v3</a>.
-          <br>Icons used here made by Freepik from www.flaticon.com is licensed under CC BY 3.0</p>
+        <p class="icon-attribution">With the exception of icons and images, this work&nbsp;is licensed under a&nbsp;<a class="footer-link-2" href="http://creativecommons.org/licenses/by-sa/4.0/" data-rt-link-type="external" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International Licence</a>. All source code is licensed under
+          <a class="footer-link-2" target="_blank" href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL v3</a>.<span class="hidden"> <a xmlns="http://www.w3.org/1999/xhtml" class="footer-link-2" href="http://www.flaticon.com">Icons made&nbsp;by Freepik</a>&nbsp;and are licensed under CC BY 3.0.</span>&nbsp;Photography by <a href="https://www.flickr.com/photos/astronomyblog/" class="footer-link-2">Stuart Lowe</a> (CC-BY-SA 4.0), London Sport/Greg Keegan, <a href="https://www.flickr.com/photos/pigpilot/7575753458/" class="footer-link-2">Stuart Grout</a> (CC-BY 2.0), <a href="https://www.flickr.com/photos/footfun/2469722745/" class="footer-link-2">Evan Lovely</a> (CC-BY 2.0)</p>
       </div>
     </div>
   </div>
@@ -161,8 +180,8 @@
         $.getJSON(url, function(data) {
             cb(data);
         }).fail(function( jqxhr, textStatus, error ) {
-        	var err = textStatus + ", " + error;
-        	console.log( "Error accessing GitHub: " + err );
+            var err = textStatus + ", " + error;
+            console.log( "Error accessing GitHub: " + err );
         });
     }
     function gitHubGetForks(success) {
@@ -173,14 +192,21 @@
     }
     function addRow(metadata) {
       console.log("Metadata for!: " + metadata["dataset-site-url"] );
-       var newRow = $( "#use-data-template" ).clone();
+      createRow("#data-user-section-list",
+                metadata["dataset-site-url"] + "images/logo.png",
+                metadata["dataset-site-url"],
+                metadata["title"],
+                metadata["description"]); 
+    }
+    function createRow(appendId,image,link,title,description) {
+       var newRow = $( "#row-template" ).clone();
        newRow.removeAttr("id"); 
-       newRow.find( "[data-field='image']" ).attr("src", metadata["dataset-site-url"] + "images/logo.png");
-       newRow.find( "[data-field~='link']" ).attr("href", metadata["dataset-site-url"]);
-       newRow.find( "[data-field~='title']" ).text(metadata["title"]);
-       newRow.find( "[data-field='description']" ).text(metadata["description"]);
+       newRow.find( "[data-field='image']" ).attr("src", image);
+       newRow.find( "[data-field~='link']" ).attr("href", link);
+       newRow.find( "[data-field~='title']" ).text(title);
+       newRow.find( "[data-field='description']" ).text(description);
        //Add row to list
-       newRow.appendTo( "#pioneers-section-list" );
+       newRow.appendTo( appendId );
        newRow.show();
     }
     function incrementCounter(queue, counter) {
@@ -206,8 +232,8 @@
      * On Page Load
      */
     $(function() {
-        $( "#use-data-template" ).each(function() {
-          $( this ).hide();
+        $( "#data-user-section-list" ).each(function() {
+          $( "#row-template" ).hide();
           gitHubGetForks(function (body) {
               for(var i = 0; i < body.length; i++) {
                   console.log("Found: " + body[i].full_name );
@@ -218,6 +244,29 @@
                         addRow(metadata);
                      }
                   });
+              }
+          });
+        });
+        $( "#pioneers-section-list" ).each(function() {
+          $( "#row-template" ).hide();
+          $.getJSON("https://www.openactive.io/community/community.json", function (data) {
+              //Only continue if load successful, ignore failure
+              console.log("Got community list!");
+              if (data["community"]) {
+                var map = data.community;
+                var keys = Object.keys(map);
+                var len = keys.length;
+                keys.sort();
+                for (var i = 0; i < len; i++) {
+                  var k = keys[i];
+                  var v = map[k];
+                  createRow("#pioneers-section-list",
+                    "https://www.openactive.io/community/logos/" + v.image,
+                    v.url,
+                    v.name,
+                    v.description); 
+                }
+                $( "#metric-community" ).text(len);
               }
           });
         });
@@ -245,7 +294,7 @@
     });
     $(function() {
       $( "#metric-impl" ).each(function() {
-        $.getJSON( "https://api.github.com/repos/openactive/activation/milestones?state=all", function( data ) {
+        $.getJSON( "https://api.github.com/repos/openactive/users/milestones?state=all", function( data ) {
           $( "#metric-impl" ).text(data.length)
         });
       });
