@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Wed Nov 09 2016 01:07:08 GMT+0000 (UTC)  -->
+<!--  Last Published: Wed Nov 09 2016 12:19:52 GMT+0000 (UTC)  -->
 <html data-wf-page="580f85cc654a49247bcabbf7" data-wf-site="580f85cc654a49247bcabbe4">
 <head>
   <meta charset="utf-8">
@@ -62,17 +62,6 @@
   </div>
   <a class="github-forkme w-hidden-medium w-hidden-small w-hidden-tiny w-inline-block" href="https://github.com/openactive/activation" target="_blank"></a>
   <div class="hero-image-base pioneers"></div>
-  <div class="w-embed">
-    <style>
-      .pioneer-row { font-family: inherit; }
-      .pioneer-row:nth-child(even) { background: #edeff2; }
-      .pioneer-row:nth-child(odd) { background: #FFFFFF; }
-      .pioneer-logo {
-        max-width: 230px;
-        max-height: 80px;
-      }
-    </style>
-  </div>
   <div class="pioneers-heading section">
     <div class="w-container">
       <div class="section-title-group">
@@ -84,18 +73,36 @@
     </div>
   </div>
   <div class="pioneers-section-grey" id="pioneers-section-list">
-    <div class="pioneer-row w-row" id="row-template">
-      <div class="w-col w-col-4">
-        <div class="pioneer-logo-container use-data w-container">
-          <div class="logo-centered">
-            <a class="w-inline-block" data-field="link" href="https://goodgym-oa.github.io/"><img class="pioneer-logo restricted" data-field="image" src="images/loading_icon.gif">
-            </a>
+    <div class="w-embed w-script">
+      <script>
+        /* MAKE SOME MAGIC */
+      </script>
+      <style>
+        .pioneer-row { font-family: inherit; }
+        .pioneer-row:nth-child(odd) { background: #edeff2; }
+        .pioneer-row:nth-child(even) { background: #FFFFFF; }
+        .pioneer-logo {
+          max-width: 230px;
+          max-height: 80px;
+        }
+      </style>
+    </div>
+    <div class="pioneer-row" id="row-template">
+      <div class="w-container">
+        <div class="w-row" id="row-template4">
+          <div class="w-col w-col-4">
+            <div class="pioneer-logo-container use-data">
+              <div class="logo-centered">
+                <a class="w-inline-block" data-field="link" href="https://goodgym-oa.github.io/"><img class="pioneer-logo restricted" data-field="image" src="images/loading_icon.gif">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="left-align w-col w-col-8">
+            <h4 class="w-hidden-small w-hidden-tiny"><a data-field="title link">Loading...</a></h4>
+            <p data-field="description"></p>
           </div>
         </div>
-      </div>
-      <div class="w-col w-col-8">
-        <h4 class="w-hidden-small w-hidden-tiny"><a data-field="title link">Loading...</a></h4>
-        <p data-field="description"></p>
       </div>
     </div>
   </div>
@@ -157,6 +164,7 @@
   <script src="js/webflow.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
   <script>
+    var scroller;
     function loadJSON(url, cb) {
         $.support.cors = true;
         $.getJSON(url, function(data) {
@@ -210,10 +218,168 @@
         // End of the list, do nothing
       }
     }
+    function incrementCounter(queue, counter) {
+      var url = queue.pop();
+      if (url) {
+        $.getJSON(url, function (metadata) {
+            //Only continue if load successful, ignore failure
+            console.log("Metadata for: " + metadata["dataset-site-url"] + " (Publish: " + metadata["publish"] + ")");
+            if (metadata["publish"]) {
+              counter ++;
+              $( "#metric-live" ).text(counter);
+            }
+            incrementCounter(queue, counter);
+        }).fail(function() {
+            console.log("Error accessing: " + url);
+            incrementCounter(queue, counter);
+        });
+      } else {
+        // End of the list, do nothing
+      }
+    }
+    function updateCommunityList(data) {
+      if (data["community"]) {
+        var map = data.community;
+        var keys = Object.keys(map);
+        var len = keys.length;
+        keys.sort();
+        for (var i = 0; i < len; i++) {
+          var k = keys[i];
+          var v = map[k];
+          createRow("#pioneers-section-list",
+            "https://www.openactive.io/community/logos/" + v.image,
+            v.url,
+            v.name,
+            v.description); 
+        }
+        $( "#metric-community" ).text(len);
+      }
+    }
+    function setupScrolling() {
+      if ( $( "#scrolltoggle" ).length ) {
+        // Now that logos are created, add scrolling logo code
+        function ScrollingList(el){
+          if(el.length == 1){
+            this.el = el;
+            this.el.find('#row-template').remove();
+            this.logos = this.el.find('.promo-box');
+            this.n = this.logos.length;
+            this.w = 255;
+            this.h = this.logos.outerHeight(true);
+            // Get the container of the list 
+            this.container = this.el.parent();
+            // Full width (all the logos in a line)
+            this.fw = (this.w*this.n);
+            this.ani;
+            this.scrolling = false;
+            this.l2r = true;
+            this.container.on('mouseover',{me:this},function(e){ e.data.me.pause(); } );
+            this.container.on('mouseout',{me:this},function(e){ e.data.me.scroll(); } );
+            this.on();
+          }
+          return this;
+        }
+        ScrollingList.prototype.on = function(){
+          // Explicitly define the logo width
+          this.logos.css({'width':this.w+'px'});
+          // Set the logo block width
+          this.el.css({'width':this.fw+'px'});
+          this.container.css({'width':'100%','max-width':'100%','height':this.h+'px','overflow':'hidden'});
+          this.logos.css({'float':'none','display':'inline-block'});
+          // The list width
+          this.lw = parseInt(this.container.css('width'));
+          this.scroll();
+          return this;
+        }
+        ScrollingList.prototype.off = function(){
+          this.container.stop();
+          this.container.scrollLeft(0);
+          // Zap all set styles
+          this.container.css({'width':'','max-width':'','height':'','overflow':''});
+          this.el.css({'width':''});
+          this.logos.css({'float':'','display':'','width':''});
+          return this;
+        }
+        ScrollingList.prototype.pause = function(){
+          if(this.scrolling){
+            this.container.stop();
+            this.scrolling = false;
+          }
+          return this;
+        }
+        ScrollingList.prototype.reverse = function(){
+          this.l2r = !this.l2r;
+          return this;
+        }
+        ScrollingList.prototype.scroll = function(){
+          if(!this.scrolling){
+            this.scrolling = true;
+            var t = 1200 * this.n;
+            var f = (this.l2r) ? (1 - (this.container.scrollLeft()/this.fw)) : (this.container.scrollLeft()/this.fw);
+            var left = (this.l2r) ? (this.w*this.n - this.lw) : 0;
+            var _obj = this;
+            this.ani = this.container.animate({ scrollLeft: left+'px'}, t*f, "linear",function(){ _obj.reverse(); _obj.scroll(); });
+            return this;
+          }
+        }
+        scroller = new ScrollingList($('#pioneers-section-list'));
+        $('#scrolltoggle').clickToggle(function() {   
+            scroller.off();
+        },
+        function() {
+            scroller.on();
+        });
+        if($('#pioneers-section-list').length == 1){
+            // Get the logos
+            var logos = $('#pioneers-section-list .promo-box');
+            var n = logos.length;
+            // Get width of an individual logo
+            var w = 255;//parseInt(logos.css('width'));
+            // Get height of an individual logo
+            var h = parseInt(logos.css('height'));
+            logos.css({'float':'none','display':'inline-block'});
+            var list = $('#pioneers-section-list').parent();
+            // Full width
+            var fw = (w*n);
+            var lw = parseInt(list.css('width'));
+            // Explicitly define the list width
+            list.css({'width':lw+'px','height':h+'px','overflow':'hidden'});
+            // Explicitly define the logo width
+            logos.css({'width':w+'px'});
+            // Set the logo block height
+            $('#pioneers .w-dyn-items').css({'width':fw+'px'});
+            var ani;
+            var l2r = true;
+            list.on('mouseover',function(e){ list.stop(); } );
+            list.on('mouseout',function(e){ scroll(); } );
+            function scroll(){
+              var t = 1200 * n;
+              var f = (l2r) ? (1 - (list.scrollLeft()/fw)) : (list.scrollLeft()/fw);
+              var left = (l2r) ? (w*n - lw) : 0;
+              ani = list.animate({ scrollLeft: left+'px'}, t*f, "linear",function(){
+                l2r = !l2r;
+                scroll();
+              });
+            }
+            scroll();
+         }
+      }
+    }
     /* 
      * On Page Load
      */
     $(function() {
+        $.fn.clickToggle = function(func1, func2) {
+            var funcs = [func1, func2];
+            this.data('toggleclicked', 0);
+            this.click(function() {
+                var data = $(this).data();
+                var tc = data.toggleclicked;
+                $.proxy(funcs[tc], this)();
+                data.toggleclicked = (tc + 1) % 2;
+            });
+            return this;
+        };
         $( "#data-user-section-list" ).each(function() {
           $( "#row-template" ).hide();
           gitHubGetForks(function (body) {
@@ -234,22 +400,8 @@
           $.getJSON("https://www.openactive.io/community/community.json", function (data) {
               //Only continue if load successful, ignore failure
               console.log("Got community list!");
-              if (data["community"]) {
-                var map = data.community;
-                var keys = Object.keys(map);
-                var len = keys.length;
-                keys.sort();
-                for (var i = 0; i < len; i++) {
-                  var k = keys[i];
-                  var v = map[k];
-                  createRow("#pioneers-section-list",
-                    "https://www.openactive.io/community/logos/" + v.image,
-                    v.url,
-                    v.name,
-                    v.description); 
-                }
-                $( "#metric-community" ).text(len);
-              }
+              updateCommunityList(data);
+              setupScrolling();
           });
         });
         $( "#metric-live" ).each(function() {
@@ -261,6 +413,10 @@
               }
               incrementCounter(queue, 0);
           });
+        });
+        $( "#slide-button" ).contextmenu(function (e) {
+          window.location.href = 'https://www.openactive.io/participate.html';
+          return false;
         });
     });
     $(function() {
