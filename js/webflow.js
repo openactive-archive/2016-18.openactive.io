@@ -715,79 +715,68 @@
 
 	var Webflow = __webpack_require__(1);
 
-	Webflow.define('brand', module.exports = function($, _) {
+	Webflow.define('brand', module.exports = function($) {
 	  var api = {};
 	  var $html = $('html');
 	  var $body = $('body');
+	  var namespace = '.w-webflow-badge';
 	  var location = window.location;
-	  var inApp = Webflow.env();
+	  var isPhantom = /PhantomJS/i.test(navigator.userAgent);
 
 	  // -----------------------------------
 	  // Module methods
 
 	  api.ready = function() {
-	    var doBranding = $html.attr('data-wf-status');
+	    var shouldBrand = $html.attr('data-wf-status');
 	    var publishedDomain = $html.attr('data-wf-domain') || '';
-
 	    if (/\.webflow\.io$/i.test(publishedDomain) && location.hostname !== publishedDomain) {
-	      doBranding = true;
+	      shouldBrand = true;
 	    }
-
-	    if (doBranding && !Webflow.env('editor')) {
-	      var $branding = $('<div></div>');
-	      var $link = $('<a></a>');
-	      $link.attr('href', 'http://webflow.com?utm_campaign=brandjs');
-
-	      $branding.css({
-	        position: 'fixed',
-	        bottom: '12px',
-	        color: '#333',
-	        right: '12px',
-	        zIndex: 2147483647,
-	        backgroundColor: '#FFF',
-	        borderRadius: '3px',
-	        boxShadow: '0 0 0 1px rgba(0,0,0,0.1), 0px 1px 3px rgba(0, 0, 0, 0.1)',
-	        padding: '6px 8px 6px 6px',
-	        fontFamily: 'Segoe UI, Arial',
-	        fontSize: '12px',
-	        opacity: '0',
-	        lineHeight: '14px'
-	      });
-
-	      $link.css({
-	        color: '#AAADB0',
-	        textDecoration: 'none'
-	      });
-
-	      var $webflowLogo = $('<img>');
-	      $webflowLogo.attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-icon.60efbf6ec9.svg');
-	      $webflowLogo.css({
-	        marginRight: '8px',
-	        opacity: 1,
-	        width: '16px',
-	        verticalAlign: 'middle'
-	      });
-	      var $webflowTextLogo = $('<img>');
-	      $webflowTextLogo.attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-text.6faa6a38cd.svg');
-	      $webflowTextLogo.css({
-	        verticalAlign: 'middle'
-	      });
-
-	      $branding.append($webflowLogo);
-	      $branding.append($webflowTextLogo);
-	      $link.append($branding);
-
-	      $body.append($link);
-
-	      if (/PhantomJS/.test(window.navigator.userAgent)) {
-	        return;
-	      }
-
-	      $branding.css({
-	        opacity: '1.0'
-	      });
+	    if (shouldBrand && !isPhantom) {
+	      ensureBrand();
+	      setTimeout(ensureBrand, 500);
 	    }
 	  };
+
+	  var brandElement = (function() {
+	    var $brand = $('<a class="w-webflow-badge"></a>')
+	    .attr('href', 'https://webflow.com?utm_campaign=brandjs');
+
+	    var $logoArt = $('<img>')
+	    .attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-icon.60efbf6ec9.svg')
+	    .css({
+	      marginRight: '8px',
+	      width: '16px',
+	    });
+
+	    var $logoText = $('<img>')
+	    .attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-text.6faa6a38cd.svg');
+
+	    $brand.append($logoArt, $logoText);
+	    return $brand[0];
+	  }());
+
+	  function ensureBrand() {
+	    var found = $body.children(namespace);
+	    var match = found.length && found.get(0) === brandElement;
+	    var inEditor = Webflow.env('editor');
+	    if (match) {
+	      // Remove brand when Editor is active
+	      if (inEditor) {
+	        found.remove();
+	      }
+	      // Exit early, brand is in place
+	      return;
+	    }
+	    // Remove any invalid brand elements
+	    if (found.length) {
+	      found.remove();
+	    }
+	    // Append the brand (unless Editor is active)
+	    if (!inEditor) {
+	      $body.append(brandElement);
+	    }
+	  }
 
 	  // Export module
 	  return api;

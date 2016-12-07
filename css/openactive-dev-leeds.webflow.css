@@ -633,7 +633,7 @@ a {
 }
 
 .hero-image-base {
-  padding-top: 217px;
+  padding-top: 150px;
   background-image: -webkit-linear-gradient(210deg, rgba(0, 228, 255, .35), hsla(9, 100%, 79%, .5));
   background-image: linear-gradient(240deg, rgba(0, 228, 255, .35), hsla(9, 100%, 79%, .5));
 }
@@ -641,7 +641,7 @@ a {
 .hero-image-base.use-data {
   background-image: -webkit-linear-gradient(210deg, rgba(0, 228, 255, .35), hsla(9, 100%, 79%, .5) 95%), url('../images/London-Sport---Greg-Keegan--3423.jpg');
   background-image: linear-gradient(240deg, rgba(0, 228, 255, .35), hsla(9, 100%, 79%, .5) 95%), url('../images/London-Sport---Greg-Keegan--3423.jpg');
-  background-position: 0px 0px, 47% 36%;
+  background-position: 0px 0px, 47% 41%;
   background-size: auto, auto;
   background-repeat: repeat, no-repeat;
   background-attachment: scroll, scroll;
@@ -650,7 +650,7 @@ a {
 .hero-image-base.pioneers {
   background-image: -webkit-linear-gradient(210deg, rgba(0, 228, 255, .35), hsla(9, 100%, 79%, .5) 86%), url('../images/12564210194_c41567fca4_k.jpg');
   background-image: linear-gradient(240deg, rgba(0, 228, 255, .35), hsla(9, 100%, 79%, .5) 86%), url('../images/12564210194_c41567fca4_k.jpg');
-  background-position: 0px 0px, 17% 43%;
+  background-position: 0px 0px, 26% 43%;
   background-size: auto, auto;
   background-repeat: repeat, no-repeat;
   background-attachment: scroll, scroll;
@@ -659,7 +659,7 @@ a {
 .hero-image-base.open-my-data {
   background-image: -webkit-linear-gradient(210deg, rgba(0, 228, 255, .35), hsla(9, 100%, 79%, .5)), url('../images/London-Sport---Greg-Keegan--7749.jpg');
   background-image: linear-gradient(240deg, rgba(0, 228, 255, .35), hsla(9, 100%, 79%, .5)), url('../images/London-Sport---Greg-Keegan--7749.jpg');
-  background-position: 0px 0px, 0px 57%;
+  background-position: 0px 0px, 0px 64%;
   background-size: auto, cover;
   background-repeat: repeat, repeat;
   background-attachment: scroll, scroll;
@@ -1004,6 +1004,16 @@ a {
 .section-block.forth {
   background-image: url('../images/9444362035_bab726019d_b.jpg');
   background-position: 50% 15%;
+}
+
+.section-block.center {
+  text-align: center;
+}
+
+.section-block.center.w3c {
+  background-image: -webkit-linear-gradient(210deg, rgba(0, 228, 255, .35), hsla(9, 100%, 79%, .5)), url('../images/2014x1263px-canoeing-group-of-canoeists.jpg');
+  background-image: linear-gradient(240deg, rgba(0, 228, 255, .35), hsla(9, 100%, 79%, .5)), url('../images/2014x1263px-canoeing-group-of-canoeists.jpg');
+  background-size: auto, 1007px;
 }
 
 .slider {
