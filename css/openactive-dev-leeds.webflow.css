@@ -163,6 +163,10 @@ a {
   color: #2e9dff;
 }
 
+.navigation-link.blog-menu.forcedcurrent {
+  color: #2e9dff;
+}
+
 .navigation-bar {
   background-color: #fff;
   font-family: Montserrat, sans-serif;
@@ -1438,11 +1442,18 @@ html.w-mod-js *[data-ix="display-none-on-load"] {
   .navigation-link.w--current {
     color: #fff;
   }
+  .navigation-link.blog-menu {
+    color: #000;
+  }
   .hamburger-button.w--open {
     background-color: #3b99d9;
   }
   .navigation-menu {
     background-color: #3b99d9;
+  }
+  .navigation-menu.blog-menu {
+    float: right;
+    background-color: transparent;
   }
   .promo-box.transparent.mlp {
     padding-top: 6px;
@@ -1624,6 +1635,13 @@ html.w-mod-js *[data-ix="display-none-on-load"] {
   }
   .button.join {
     margin-bottom: 0px;
+  }
+  .navigation-link.blog-menu {
+    padding-right: 10px;
+    padding-left: 5px;
+  }
+  .navigation-menu.blog-menu {
+    float: right;
   }
   .section {
     text-align: center;
