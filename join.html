@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Wed Dec 07 2016 10:19:21 GMT+0000 (UTC)  -->
+<!--  Last Published: Sat Dec 10 2016 18:59:49 GMT+0000 (UTC)  -->
 <html data-wf-page="580f85cc654a49247bcabbf2" data-wf-site="580f85cc654a49247bcabbe4">
 <head>
   <meta charset="utf-8">
@@ -53,7 +53,7 @@
 <body>
   <div class="navigation-bar w-nav" data-animation="default" data-collapse="medium" data-duration="400">
     <div class="w-container"><a class="brand-link w-nav-brand" href="index.html"><h1 class="brand-text main-logo">OpenActive</h1></a>
-      <nav class="navigation-menu w-nav-menu" role="navigation"><a class="navigation-link w-nav-link" href="index.html">Home</a><a class="navigation-link w-nav-link" href="technology.html" target="_top">Open your data</a><a class="navigation-link w-nav-link" href="use-data.html" target="_top">Use data</a><a class="navigation-link w-nav-link" href="learn.html">Learn about data</a><a class="hidden navigation-link w-nav-link" href="participate.html" target="_top">Resources</a><a class="navigation-link w-nav-link" href="w3c-community-group.html" target="_top">Data standards</a><a class="navigation-link w-nav-link" href="pioneers.html" target="_top">Who's involved?</a><a class="hidden navigation-link w-nav-link" href="ignore-template-originals/faq.html">FAQ</a><a class="navigation-link w-nav-link" href="join.html">Join us</a>
+      <nav class="navigation-menu w-nav-menu" role="navigation"><a class="navigation-link w-nav-link" href="index.html">Home</a><a class="navigation-link w-nav-link" href="technology.html" target="_top">Open your data</a><a class="navigation-link w-nav-link" href="use-data.html" target="_top">Use data</a><a class="navigation-link w-nav-link" href="learn.html">Learn about data</a><a class="hidden navigation-link w-nav-link" href="participate.html" target="_top">Resources</a><a class="navigation-link w-nav-link" href="w3c-community-group.html" target="_top">Data standards</a><a class="navigation-link w-nav-link" href="https://blog.openactive.io">Blog</a><a class="navigation-link w-nav-link" href="pioneers.html" target="_top">Who's involved?</a><a class="hidden navigation-link w-nav-link" href="ignore-template-originals/faq.html">FAQ</a><a class="navigation-link w-nav-link" href="join.html">Join us</a>
       </nav>
       <div class="hamburger-button w-nav-button">
         <div class="w-icon-nav-menu"></div>
@@ -65,13 +65,108 @@
   <div class="section">
     <div class="w-container">
       <div class="section-title-group">
-        <h2 class="centered section-heading">join today</h2>
-        <div class="center section-subheading">HELP BRING PHYSICAL ACTIVITY INTO THE DIGITAL AGE</div>
-        <h3 class="home-header">OPEN INVITATION</h3>
-        <p class="home-body left-align">We can only make this change happen by working together; innovating through collaboration. If you want to get involved then please get in touch below:</p>
-        <div class="w-embed w-hidden-small w-hidden-tiny w-iframe">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSemdEsyaDMVcoLwB5fRZf29fyOivoebay6c_I9AERLFZsCUSQ/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-        </div><a class="button w-hidden-main w-hidden-medium" href="https://docs.google.com/a/theodi.org/forms/d/1_G3AdeHf1jJWxIF5zelpo9rAstF7dBE_v5Q8j0RTxtc/edit" target="_blank">Get in touch</a>
+        <h2 class="centered section-heading">Join today</h2>
+        <div class="center section-subheading">Help bring physical activity into the digitial age</div>
+        <h3 class="home-header">Open invitation</h3>
+        <p class="home-body left-align">We can only make this change happen by working together; innovating through collaboration. If you want to get in touch or get involved then please fill in the form below:</p>
+        <div class="w-embed w-script">
+          <!--  Note to edit styles, see the "Join Us - Styles" page in templates folder.
+     This MailChimp form is augmented with classes from the Webflow form in that page.
+     MailChimp will reset the form on a successful submission - so we use onreset on show the thankyou page  -->
+          <style>
+            .mc-checkboxes input[type='checkbox'] {
+              display: block;
+              position: absolute;
+              margin-top: 2px;
+            }
+            .mc-checkboxes label {
+              display: block;
+              margin-left: 20px;
+              font-weight: normal;
+            }
+            .mc-checkboxes li {
+              margin-top: 15px;
+            }
+            #mce-success-response {
+              background-color: #ddd;
+            }
+          </style>
+          <div id="mc_embed_signup">
+            <form action="//openactive.us13.list-manage.com/subscribe/post?u=9e6648557f84731796a4ac873&amp;id=1665f95799" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" onreset="window.location.href = 'thank-you';" class="validate" target="_blank" novalidate="">
+              <div id="mc_embed_signup_scroll">
+                <div class="mc-field-group">
+                  <label for="mce-FNAME" class="form-label">First Name </label>
+                  <input type="text" value="" name="FNAME" class="required form-field w-input" id="mce-FNAME">
+                </div>
+                <div class="mc-field-group">
+                  <label for="mce-LNAME" class="form-label">Last Name </label>
+                  <input type="text" value="" name="LNAME" class="required form-field w-input" id="mce-LNAME">
+                </div>
+                <div class="mc-field-group">
+                  <label for="mce-ORG" class="form-label">Organisation </label>
+                  <input type="text" value="" name="ORG" class="required form-field w-input" id="mce-ORG">
+                </div>
+                <div class="mc-field-group">
+                  <label for="mce-EMAIL" class="form-label">Contact e-mail address </label>
+                  <input type="email" value="" name="EMAIL" class="required email form-field w-input" id="mce-EMAIL">
+                </div>
+                <div class="mc-field-group">
+                  <label for="mce-PHONE" class="form-label">Contact phone number </label>
+                  <input type="text" name="PHONE" class="form-field w-input" value="" id="mce-PHONE">
+                </div>
+                <div class="mc-field-group input-group">
+                  <label class="form-label">Are you interested in: </label>
+                  <ul class="mc-checkboxes interests-wrapper">
+                    <li>
+                      <input type="checkbox" value="1" name="group[10889][1]" id="mce-group[10889]-10889-0">
+                      <label for="mce-group[10889]-10889-0">Making my activities more visible to consumers</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" value="2" name="group[10889][2]" id="mce-group[10889]-10889-1">
+                      <label for="mce-group[10889]-10889-1">Building apps or services using data about activities</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" value="4" name="group[10889][4]" id="mce-group[10889]-10889-2">
+                      <label for="mce-group[10889]-10889-2">Allowing users of my booking system or platform to publish data</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" value="8" name="group[10889][8]" id="mce-group[10889]-10889-3">
+                      <label for="mce-group[10889]-10889-3">Contributing to data standards</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" value="16" name="group[10889][16]" id="mce-group[10889]-10889-4">
+                      <label for="mce-group[10889]-10889-4">Spreading the word</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" value="32" name="group[10889][32]" id="mce-group[10889]-10889-5">
+                      <label for="mce-group[10889]-10889-5">Learning about open data and standards</label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mc-field-group">
+                  <label for="mce-INFO" class="form-label">Please add any further information here </label>
+                  <textarea value="" name="INFO" class="form-field text-area w-input" id="mce-INFO"></textarea>
+                </div>
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <!--  real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_9e6648557f84731796a4ac873_1665f95799" tabindex="-1" value="">
+                </div>
+                <div class="clear">
+                  <input type="submit" value="Send" name="subscribe" id="mc-embedded-subscribe" class="button full-width w-button send-button">
+                </div>
+              </div>
+            </form>
+          </div>
+          <script type="text/javascript" src="https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+          <script type="text/javascript">
+            (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='ORG';ftypes[4]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[3]='PHONE';ftypes[3]='phone';fnames[6]='INFO';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+          </script>
+          <!-- End mc_embed_signup -->
+        </div>
         <h3 class="home-header">How you can get involved</h3>
         <p class="home-body left-align">Some of the ways in which you can get involved:</p>
         <ul class="unordered-list">
@@ -98,11 +193,11 @@
     <div class="footercta w-container">
       <div class="w-row">
         <div class="spc w-col w-col-6">
-          <h5 class="home-header">about openactive</h5>
+          <h5 class="home-header">About OpenActive</h5>
           <p class="home-body left-align">We are a group of organisations who believe that open data will help people get active, coordinated by the <a target="_blank" href="http://opendata.institute">Open Data Institute</a>.</p>
         </div>
         <div class="spc w-col w-col-6">
-          <h5 class="home-header">CONTACT</h5>
+          <h5 class="home-header">Contact</h5>
           <p class="home-body left-align">We'd love to hear from you. Whatever's on your mind, send us a note at <a href="mailto:hello@openactive.io">hello@openactive.io</a>.</p>
           <div class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny">
             <p class="home-body">Want to be kept up to date on all that's happening?</p>
@@ -126,7 +221,7 @@
             </div>
           </div>
         </div>
-      </div><a class="button button-left footer-joinus" href="join.html">JOIN US</a>
+      </div><a class="button button-left footer-joinus" href="join.html">Join us</a>
     </div>
   </div>
   <div alt="Creative Commons License" class="center footer">
@@ -139,7 +234,7 @@
     <div class="w-container">
       <div class="footer-text">
         <p class="icon-attribution">With the exception of icons and images, this work&nbsp;is licensed under a&nbsp;<a class="footer-link-2" href="http://creativecommons.org/licenses/by-sa/4.0/" data-rt-link-type="external" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International Licence</a>. All source code is licensed under
-          <a class="footer-link-2" target="_blank" href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL v3</a>.<span class="hidden"> <a xmlns="http://www.w3.org/1999/xhtml" class="footer-link-2" href="http://www.flaticon.com">Icons made&nbsp;by Freepik</a>&nbsp;and are licensed under CC BY 3.0.</span>&nbsp;Photography by <a href="https://www.flickr.com/photos/astronomyblog/" class="footer-link-2">Stuart Lowe</a> (CC-BY-SA 4.0), London Sport/Greg Keegan, <a href="https://www.flickr.com/photos/pigpilot/7575753458/" class="footer-link-2">Stuart Grout</a> (CC-BY 2.0), <a href="https://www.flickr.com/photos/footfun/2469722745/" class="footer-link-2">Evan Lovely</a> (CC-BY 2.0)</p>
+          <a class="footer-link-2" target="_blank" href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL v3</a>.<span class="hidden"> <a xmlns="http://www.w3.org/1999/xhtml" class="footer-link-2" href="http://www.flaticon.com">Icons made&nbsp;by Freepik</a>&nbsp;and are licensed under CC BY 3.0.</span>&nbsp;Photography by <a href="https://www.flickr.com/photos/astronomyblog/" class="footer-link-2">Stuart Lowe</a> (CC-BY-SA 4.0), London Sport/Greg Keegan, <a href="https://www.flickr.com/photos/pigpilot/7575753458/" class="footer-link-2">Stuart Grout</a> (CC-BY 2.0), <a href="https://www.flickr.com/photos/footfun/2469722745/" class="footer-link-2">Evan Lovely</a> (CC-BY 2.0). Icons made by <a href="http://www.flaticon.com/authors/pixel-buddha" class="footer-link-2" target="_blank">Pixel Buddha</a> from <a href="http://www.flaticon.com" class="footer-link-2" target="_blank">www.flaticon.com</a> is licensed by <a class="footer-link-2" target="_blank" href="http://creativecommons.org/licenses/by/3.0/">CC 3.0 BY</a>.</p>
       </div>
     </div>
   </div>
