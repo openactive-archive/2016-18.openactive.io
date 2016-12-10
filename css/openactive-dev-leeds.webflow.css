@@ -164,7 +164,7 @@ a {
 }
 
 .navigation-link.blog-menu.forcedcurrent {
-  color: #2e9dff;
+  color: #0082f3;
 }
 
 .navigation-bar {
@@ -1443,6 +1443,7 @@ html.w-mod-js *[data-ix="display-none-on-load"] {
     color: #fff;
   }
   .navigation-link.blog-menu {
+    padding-left: 0px;
     color: #000;
   }
   .hamburger-button.w--open {
@@ -1452,7 +1453,8 @@ html.w-mod-js *[data-ix="display-none-on-load"] {
     background-color: #3b99d9;
   }
   .navigation-menu.blog-menu {
-    float: right;
+    float: none;
+    clear: left;
     background-color: transparent;
   }
   .promo-box.transparent.mlp {
@@ -1510,6 +1512,9 @@ html.w-mod-js *[data-ix="display-none-on-load"] {
   }
   .button.join {
     width: auto;
+  }
+  .navigation-menu.blog-menu {
+    margin-left: 10px;
   }
   .promo-box {
     margin-bottom: 30px;
@@ -1636,12 +1641,8 @@ html.w-mod-js *[data-ix="display-none-on-load"] {
   .button.join {
     margin-bottom: 0px;
   }
-  .navigation-link.blog-menu {
-    padding-right: 10px;
-    padding-left: 5px;
-  }
   .navigation-menu.blog-menu {
-    float: right;
+    float: none;
   }
   .section {
     text-align: center;
