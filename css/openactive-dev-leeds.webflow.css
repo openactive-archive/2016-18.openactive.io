@@ -1439,7 +1439,11 @@ html.w-mod-js *[data-ix="display-none-on-load"] {
     background-color: transparent;
     color: hsla(0, 0%, 100%, .52);
   }
+  .navigation-link:hover {
+    color: #fff;
+  }
   .navigation-link.w--current {
+    padding-left: 20px;
     color: #fff;
   }
   .navigation-link.blog-menu {
