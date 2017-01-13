@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Mon Dec 19 2016 00:39:27 GMT+0000 (UTC)  -->
+<!--  Last Published: Fri Jan 13 2017 15:06:48 GMT+0000 (UTC)  -->
 <html data-wf-page="5810c6f7a9769c55119ca706" data-wf-site="580f85cc654a49247bcabbe4">
 <head>
   <meta charset="utf-8">
@@ -532,13 +532,15 @@
           gitHubGetForks(function (body) {
               for(var i = 0; i < body.length; i++) {
                   console.log("Found: " + body[i].full_name );
-                  $.getJSON("https://raw.githubusercontent.com/" + body[i].full_name + "/master/metadata.json", function (metadata) {
-                     //Only continue if load successful, ignore failure
-                     console.log("Metadata for: " + metadata["dataset-site-url"] + " (Publish: " + metadata["publish"] + ")");
-                     if (metadata["publish"]) {
-                        addRow(metadata);
-                     }
-                  });
+                  if (body[i].stargazers_count >= 1) {
+                    $.getJSON("https://raw.githubusercontent.com/" + body[i].full_name + "/master/metadata.json", function (metadata) {
+                       //Only continue if load successful, ignore failure
+                       console.log("Metadata for: " + metadata["dataset-site-url"] + " (Publish: " + metadata["publish"] + ")");
+                       if (metadata["publish"]) {
+                          addRow(metadata);
+                       }
+                    });
+                  }
               }
           });
         });
@@ -556,7 +558,9 @@
               var queue = [];
               for(var i = 0; i < body.length; i++) {
                   console.log("Found: " + body[i].full_name );
-                  queue.push("https://raw.githubusercontent.com/" + body[i].full_name + "/master/metadata.json");
+                  if (body[i].stargazers_count >= 1) {
+                  	queue.push("https://raw.githubusercontent.com/" + body[i].full_name + "/master/metadata.json");
+                  }
               }
               incrementCounter(queue, 0);
           });

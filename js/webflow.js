@@ -767,6 +767,7 @@
     var namespace = '.w-webflow-badge';
     var location = window.location;
     var isPhantom = /PhantomJS/i.test(navigator.userAgent);
+    var brandElement;
 
     // -----------------------------------
     // Module methods
@@ -778,12 +779,13 @@
         shouldBrand = true;
       }
       if (shouldBrand && !isPhantom) {
+        brandElement = brandElement || createBadge();
         ensureBrand();
         setTimeout(ensureBrand, 500);
       }
     };
 
-    var brandElement = (function() {
+    function createBadge() {
       var $brand = $('<a class="w-webflow-badge"></a>')
       .attr('href', 'https://webflow.com?utm_campaign=brandjs');
 
@@ -799,7 +801,7 @@
 
       $brand.append($logoArt, $logoText);
       return $brand[0];
-    }());
+    }
 
     function ensureBrand() {
       var found = $body.children(namespace);
