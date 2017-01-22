@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Sun Jan 22 2017 14:21:13 GMT+0000 (UTC)  -->
+<!--  Last Published: Sun Jan 22 2017 15:05:03 GMT+0000 (UTC)  -->
 <html data-wf-page="580f85cc654a49247bcabbf2" data-wf-site="580f85cc654a49247bcabbe4">
 <head>
   <meta charset="utf-8">
@@ -66,6 +66,12 @@
         ';path=/;expires='+new Date(0).toUTCString();i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}};
     })(window,document,window['_fs_namespace'],'script','user');
   </script>
+  <!--  Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent  -->
+  <script type="text/javascript">
+    window.cookieconsent_options = {"message":"We use cookies to ensure that we give you the best experience on our website.","dismiss":"Continue","learnMore":null,"link":null,"theme":"light-bottom"};
+  </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+  <!--  End Cookie Consent plugin  -->
 </head>
 <body>
   <div class="navigation-bar w-nav" data-animation="default" data-collapse="medium" data-duration="400">
@@ -105,6 +111,15 @@
                 "info": $("#mce-INFO").val(),
                 "interests": interests
               };
+              try {
+                FS.identify(formMap["email"], {
+                  displayName: formMap["fname"] + " " + formMap["lname"],
+                  email: formMap["email"]
+                });
+              }
+              catch(err) {
+                  console.log("FS error: " + err.message);
+              }
             	$.post( "https://hooks.zapier.com/hooks/catch/1828761/twmgjw/", formMap)
                 .done(function() {
             			window.location.href = 'thank-you';
@@ -113,11 +128,6 @@
                   $("#mce-error-response").text("Error sending form contents, please try sending again.");
                   $("#mce-success-response").hide();
                   $("#mce-error-response").show();
-                });
-                // This is an example script - don't forget to change it!
-                FS.identify(formMap["email"], {
-                  displayName: formMap["fname"] + " " + formMap["lname"],
-                  email: formMap["email"]
                 });
             }
           </script>
