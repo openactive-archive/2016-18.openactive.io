@@ -762,6 +762,7 @@ a {
 }
 
 .footer-link-2 {
+  display: none;
   color: #9e9e9e;
 }
 
