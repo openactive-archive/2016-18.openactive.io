@@ -274,8 +274,8 @@ a {
 }
 
 .hero-section.centered {
-  padding-top: 130px;
-  padding-bottom: 130px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   border-bottom: 0px solid #000;
   background-image: -webkit-linear-gradient(210deg, rgba(0, 228, 255, .35), hsla(9, 100%, 79%, .5)), url('../images/10903449356_405dfee200_k.jpg');
   background-image: linear-gradient(240deg, rgba(0, 228, 255, .35), hsla(9, 100%, 79%, .5)), url('../images/10903449356_405dfee200_k.jpg');
@@ -1373,6 +1373,21 @@ a {
   background-color: #ffdede;
 }
 
+.twitter-frame {
+  display: inline-block;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.twitter-button {
+  display: inline-block;
+  padding-left: 125px;
+}
+
+.twitter-footer {
+  margin-top: 20px;
+}
+
 html.w-mod-js *[data-ix="fade-in-bottom-page-loads"] {
   opacity: 0;
   -webkit-transform: translate(0px, 50px);
@@ -1468,8 +1483,8 @@ html.w-mod-js *[data-ix="display-none-on-load"] {
     padding-top: 6px;
   }
   .hero-section.centered {
-    padding-top: 144px;
-    padding-bottom: 144px;
+    padding-top: 94px;
+    padding-bottom: 114px;
   }
   .grid-image {
     width: 50%;
@@ -1527,8 +1542,8 @@ html.w-mod-js *[data-ix="display-none-on-load"] {
     margin-bottom: 30px;
   }
   .hero-section.centered {
-    padding-top: 119px;
-    padding-bottom: 119px;
+    padding-top: 49px;
+    padding-bottom: 79px;
   }
   .hero-heading {
     margin-bottom: 15px;
