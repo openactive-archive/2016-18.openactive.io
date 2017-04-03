@@ -239,7 +239,7 @@ a {
 .promo-box {
   padding: 15px;
   border: 1px solid #dcebf7;
-  background-color: #cf404d;
+  background-color: #00b6ff;
   color: #fff;
   text-align: center;
   text-decoration: none;
@@ -265,7 +265,7 @@ a {
   padding-bottom: 35px;
   border-style: none;
   border-radius: 0px;
-  background-color: #cf404d;
+  background-color: #00b6ff;
 }
 
 .hero-section {
@@ -1432,9 +1432,9 @@ html.w-mod-js *[data-ix="fade-in-bottom-scroll-in"] {
 
 html.w-mod-js *[data-ix="bounce-in-scroll-in"] {
   opacity: 0;
-  -webkit-transform: scale(0.6000000000000003, 0.6000000000000003);
-  -ms-transform: scale(0.6000000000000003, 0.6000000000000003);
-  transform: scale(0.6000000000000003, 0.6000000000000003);
+  -webkit-transform: scale(0.6000000000000004, 0.6000000000000004);
+  -ms-transform: scale(0.6000000000000004, 0.6000000000000004);
+  transform: scale(0.6000000000000004, 0.6000000000000004);
 }
 
 html.w-mod-js *[data-ix="scale-on-scroll"] {
