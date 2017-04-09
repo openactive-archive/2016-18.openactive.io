@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Mon Apr 03 2017 10:54:32 GMT+0000 (UTC)  -->
+<!--  Last Published: Sun Apr 09 2017 13:42:06 GMT+0000 (UTC)  -->
 <html data-wf-page="58e2271fb58087a679be8d9f" data-wf-site="580f85cc654a49247bcabbe4">
 <head>
   <meta charset="utf-8">
@@ -69,11 +69,51 @@
         ';path=/;expires='+new Date(0).toUTCString();i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}};
     })(window,document,window['_fs_namespace'],'script','user');
   </script>
-  <!--  Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent  -->
-  <script type="text/javascript">
-    window.cookieconsent_options = {"message":"We use cookies to ensure that we give you the best experience on our website.","dismiss":"Continue","learnMore":"More info","link":"privacy-policy.html","theme":"light-bottom"};
+  <!--  Begin Cookie Consent plugin - https://cookieconsent.insites.com/  -->
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
+  <style>
+    .cc-theme-block {
+  	border: 3px solid #333;
+    }
+    .cc-btn {
+      text-decoration: none; 
+      font-family: Montserrat, sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 16px;
+      border-radius: 0px;
+    }
+    .cc-btn:hover {
+      background-color: "#2e9dff";
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#ffffff",
+          "text": "#000000",
+        },
+        "button": {
+          "background": "#00b6ff",
+          "text": "#ffffff"
+        }
+      },
+      "theme": "block",
+      "position": "bottom-right",
+      "content": {
+        "message": "We use cookies to ensure that we give you the best experience on our website.",
+        "dismiss": "Continue",
+        "href": "privacy-policy.html"
+      },
+      "blacklistPage": [/.*blog.*/],
+      "dismissOnTimeout": 10000,
+      "dismissOnScroll": 20
+    })});
   </script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
   <!--  End Cookie Consent plugin  -->
 </head>
 <body>
