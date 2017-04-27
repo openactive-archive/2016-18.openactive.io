@@ -141,6 +141,10 @@ a {
   margin-top: 20px;
 }
 
+.button.inline-with-para {
+  margin-top: 14px;
+}
+
 .navigation-link {
   padding-right: 25px;
   padding-left: 0px;
@@ -1064,6 +1068,10 @@ a {
   display: -ms-flexbox;
   display: flex;
   height: 100px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -1437,6 +1445,52 @@ a {
   align-items: stretch;
 }
 
+.image {
+  margin-top: 20px;
+}
+
+.elearning-block {
+  padding: 10px;
+  background-color: #003f69;
+  text-decoration: none;
+}
+
+.promo-subheading {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: #fff;
+  text-align: left;
+}
+
+.elearning-image-block {
+  height: 120px;
+  background-color: #fff;
+  background-image: url('../images/487a92d1f0d603836df88c719b96ec30d2a6fad1.png');
+  background-position: 50% 50%;
+  background-size: auto 90%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.elearning-image-block.elearning-img-2 {
+  background-image: url('../images/a504270596bccd50c7606befecc8b926320b60a8.png');
+  background-size: auto 90%;
+}
+
+.elearning-image-block.elearning-img-3 {
+  background-image: url('../images/2c892e598e3cfd41ff06c3b7a59a31ea49d13010.png');
+  background-size: auto 90%;
+}
+
+.elearning-image-block.elearning-img-4 {
+  background-image: url('../images/ad9dde7114a0f52e48bd4578c4ebe5594a551cfe.png');
+  background-size: auto 90%;
+}
+
+.elearning-image {
+  max-width: 79%;
+}
+
 html.w-mod-js *[data-ix="fade-in-bottom-page-loads"] {
   opacity: 0;
   -webkit-transform: translate(0px, 50px);
@@ -1500,6 +1554,9 @@ html.w-mod-js *[data-ix="display-none-on-load"] {
 @media (max-width: 991px) {
   h3 {
     letter-spacing: 3px;
+  }
+  .button.inline-with-para {
+    margin-top: 0px;
   }
   .navigation-link {
     padding-left: 20px;
@@ -1691,6 +1748,13 @@ html.w-mod-js *[data-ix="display-none-on-load"] {
     margin-bottom: 5px;
     text-align: center;
   }
+  .elearning-block {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .promo-subheading {
+    margin-top: 0px;
+  }
 }
 
 @media (max-width: 479px) {
@@ -1764,6 +1828,9 @@ html.w-mod-js *[data-ix="display-none-on-load"] {
   }
   .success-message {
     text-align: center;
+  }
+  .elearning-block {
+    width: 100%;
   }
 }
 
