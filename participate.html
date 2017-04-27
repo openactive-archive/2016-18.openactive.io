@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Thu Apr 27 2017 10:40:39 GMT+0000 (UTC)  -->
+<!--  Last Published: Thu Apr 27 2017 12:37:02 GMT+0000 (UTC)  -->
 <html data-wf-page="58e2271fb58087a679be8d96" data-wf-site="580f85cc654a49247bcabbe4">
 <head>
   <meta charset="utf-8">
@@ -170,7 +170,31 @@
         <div class="center off-white section-subheading">A few pixels worth a thousand words</div>
         <p class="whitetext">We welcome your thoughts on which slides you think are particularly useful and others less so. Most discussions do not actually require every slide, but it can be useful to jump to the relevant slides depending on the conversation. You can <a href="https://docs.google.com/presentation/d/1Qk4tq6fkmSaYQxx_K-Psoch-X-EhQbOId3-7nGzTC74/" target="_blank">download or comment on these slides</a>, remix, and edit them as required, just make sure you keep the "OPENACTIVE.IO" attribution intact. If you're unsure of any of the content or would like to share feedback with us, please e-mail&nbsp;<a href="mailto:hello@openactive.io?subject=OpenActive Slide Feedback">hello@openactive.io</a>.</p>
         <div class="w-embed w-iframe">
-          <iframe src="https://docs.google.com/presentation/d/1Qk4tq6fkmSaYQxx_K-Psoch-X-EhQbOId3-7nGzTC74/embed?start=false&loop=false" frameborder="0" width="940" height="557" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          <style>
+            .intrinsic-container {
+              position: relative;
+              height: 0;
+              overflow: hidden;
+            }
+            /* 16x9 Aspect Ratio */
+            .intrinsic-container-16x9 {
+              padding-bottom: 59.5%;
+            }
+            /* 4x3 Aspect Ratio */
+            .intrinsic-container-4x3 {
+              padding-bottom: 75%;
+            }
+            .intrinsic-container iframe {
+              position: absolute;
+              top:0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+          </style>
+          <div class="intrinsic-container intrinsic-container-16x9">
+            <iframe src="https://docs.google.com/presentation/d/1Qk4tq6fkmSaYQxx_K-Psoch-X-EhQbOId3-7nGzTC74/embed?start=false&loop=false" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          </div>
         </div>
       </div>
     </div>
