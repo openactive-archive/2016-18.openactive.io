@@ -1026,8 +1026,10 @@ a {
 }
 
 .section-block.third {
-  background-image: -webkit-linear-gradient(210deg, rgba(0, 228, 255, .35), hsla(9, 100%, 79%, .5)), url('../images/7386954522_c4eea60df0_k.jpg');
-  background-image: linear-gradient(240deg, rgba(0, 228, 255, .35), hsla(9, 100%, 79%, .5)), url('../images/7386954522_c4eea60df0_k.jpg');
+  padding-right: 25px;
+  padding-left: 26px;
+  background-image: -webkit-linear-gradient(210deg, rgba(0, 228, 255, .5), hsla(9, 100%, 79%, .7)), url('../images/7386954522_c4eea60df0_k.jpg');
+  background-image: linear-gradient(240deg, rgba(0, 228, 255, .5), hsla(9, 100%, 79%, .7)), url('../images/7386954522_c4eea60df0_k.jpg');
   background-position: 0px 0px, 43% 56%;
   background-size: auto, 1024px;
   background-repeat: repeat, repeat;
@@ -1502,6 +1504,24 @@ a {
 
 .w3c-previous-meetings {
   margin-top: 10px;
+}
+
+.bold-text {
+  display: inline;
+  margin-right: 0px;
+  color: #edeff2;
+}
+
+.paragraph {
+  color: #edeff2;
+}
+
+.cta--text__link {
+  color: #2d3e4f;
+}
+
+.bold-text-2 {
+  font-size: 16px;
 }
 
 html.w-mod-js *[data-ix="fade-in-bottom-page-loads"] {
