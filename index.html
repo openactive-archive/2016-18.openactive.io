@@ -551,7 +551,7 @@ $(function() {
     });
     $( "#pioneers-section-list" ).each(function() {
       $( "#row-template" ).hide();
-      $.getJSON("https://www.openactive.io/community/community.json", function (data) {
+      $.getJSON("https://openactive.io/community-members/community.json", function (data) {
           //Only continue if load successful, ignore failure
           console.log("Got community list!");
           updateCommunityList(data);
