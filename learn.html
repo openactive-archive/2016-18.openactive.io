@@ -122,28 +122,28 @@ window.cookieconsent.initialise({
         <h2 class="centered section-heading">Learn about data</h2>
         <div class="center section-subheading">Find out how open data will benefit you</div>
         <h3 class="home-header">Online open data course for physical activity</h3>
-        <p class="home-body left-align">The Open Data Institute are providing a free, online <a href="https://www.openactive.io/learn/">open data e-learning course</a>, including a set of practical modules covering <a href="https://www.openactive.io/learn/#/id/581c76824d7b7e82691e408b">what open data is</a>, <a href="https://www.openactive.io/learn/#/id/584928ca4d7b7e82691e4bd1">its business benefits</a>, how it can be <a href="https://www.openactive.io/learn/#/id/584928ce4d7b7e82691e4c28">published and prioritised</a> to gain real value from it. Give it a try and <a href="mailto:hello@openactive.io?subject=E-learning%20Feedback">send us your feedback</a>!</p>
+        <p class="home-body left-align">The Open Data Institute are providing a free, online <a href="https://openactive.io/learn/">open data e-learning course</a>, including a set of practical modules covering <a href="https://openactive.io/learn/#/id/581c76824d7b7e82691e408b">what open data is</a>, <a href="https://openactive.io/learn/#/id/584928ca4d7b7e82691e4bd1">its business benefits</a>, how it can be <a href="https://openactive.io/learn/#/id/584928ce4d7b7e82691e4c28">published and prioritised</a> to gain real value from it. Give it a try and <a href="mailto:hello@openactive.io?subject=E-learning%20Feedback">send us your feedback</a>!</p>
         <div class="w-row">
           <div class="w-col w-col-3 w-col-small-6 w-col-tiny-tiny-stack">
-            <a href="https://www.openactive.io/learn/#/id/581c76824d7b7e82691e408b" target="_blank" class="elearning-block w-inline-block">
+            <a href="https://openactive.io/learn/#/id/581c76824d7b7e82691e408b" target="_blank" class="elearning-block w-inline-block">
               <div class="elearning-image-block"></div>
               <h4 class="promo-subheading">1. Open data in the physical activity sector</h4>
             </a>
           </div>
           <div class="w-col w-col-3 w-col-small-6 w-col-tiny-tiny-stack">
-            <a href="https://www.openactive.io/learn/#/id/584928ca4d7b7e82691e4bd1" target="_blank" class="elearning-block w-inline-block">
+            <a href="https://openactive.io/learn/#/id/584928ca4d7b7e82691e4bd1" target="_blank" class="elearning-block w-inline-block">
               <div class="elearning-image-block elearning-img-2"></div>
               <h4 class="promo-subheading">2. Creating impact from open data</h4>
             </a>
           </div>
           <div class="w-col w-col-3 w-col-small-6 w-col-tiny-tiny-stack">
-            <a href="https://www.openactive.io/learn/#/id/584928ce4d7b7e82691e4c28" target="_blank" class="elearning-block w-inline-block">
+            <a href="https://openactive.io/learn/#/id/584928ce4d7b7e82691e4c28" target="_blank" class="elearning-block w-inline-block">
               <div class="elearning-image-block elearning-img-3"></div>
               <h4 class="promo-subheading">3. Prioritising data to publish openly</h4>
             </a>
           </div>
           <div class="w-col w-col-3 w-col-small-6 w-col-tiny-tiny-stack">
-            <a href="https://www.openactive.io/learn/#/id/584928f24d7b7e82691e4cf1" target="_blank" class="elearning-block w-inline-block">
+            <a href="https://openactive.io/learn/#/id/584928f24d7b7e82691e4cf1" target="_blank" class="elearning-block w-inline-block">
               <div class="elearning-image-block elearning-img-4"></div>
               <h4 class="promo-subheading">4. How to make your data useful</h4>
             </a>
@@ -269,7 +269,7 @@ function updateCommunityList(data) {
       var k = keys[i];
       var v = map[k];
       createRow("#pioneers-section-list",
-        "https://www.openactive.io/community/logos/" + v.image,
+        "/community-members/logos/" + v.image,
         v.url,
         v.name,
         v.description); 
@@ -404,7 +404,7 @@ $(function() {
     };
     $( "#data-user-section-list" ).each(function() {
       $( "#row-template" ).hide();
-      $.getJSON( "https://www.openactive.io/datasets/directory.json", function( body ) {
+      $.getJSON( "/datasets/directory.json", function( body ) {
           for(var i = 0; i < body.length; i++) {
             var metadata = body[i];
             console.log("Metadata for: " + metadata["dataset-site-url"] + " (Publish: " + metadata["publish"] + ")");
@@ -416,7 +416,7 @@ $(function() {
     });
     $( "#pioneers-section-list" ).each(function() {
       $( "#row-template" ).hide();
-      $.getJSON("https://www.openactive.io/community/community.json", function (data) {
+      $.getJSON("/community-members/community.json", function (data) {
           //Only continue if load successful, ignore failure
           console.log("Got community list!");
           updateCommunityList(data);
@@ -424,7 +424,7 @@ $(function() {
       });
     });
     $( "#slide-button" ).contextmenu(function (e) {
-      window.location.href = 'https://www.openactive.io/participate.html';
+      window.location.href = '/participate.html';
       return false;
     });
 });
@@ -448,7 +448,7 @@ $(function() {
 });
 $(function() {
   $( "#metric-live" ).each(function() {
-    $.getJSON( "https://www.openactive.io/datasets/directory.json", function( data ) {
+    $.getJSON( "/datasets/directory.json", function( data ) {
       $( "#metric-live" ).text(data.length)
     });
   });

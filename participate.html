@@ -279,7 +279,7 @@ function updateCommunityList(data) {
       var k = keys[i];
       var v = map[k];
       createRow("#pioneers-section-list",
-        "https://www.openactive.io/community/logos/" + v.image,
+        "/community-members/logos/" + v.image,
         v.url,
         v.name,
         v.description); 
@@ -414,7 +414,7 @@ $(function() {
     };
     $( "#data-user-section-list" ).each(function() {
       $( "#row-template" ).hide();
-      $.getJSON( "https://www.openactive.io/datasets/directory.json", function( body ) {
+      $.getJSON( "/datasets/directory.json", function( body ) {
           for(var i = 0; i < body.length; i++) {
             var metadata = body[i];
             console.log("Metadata for: " + metadata["dataset-site-url"] + " (Publish: " + metadata["publish"] + ")");
@@ -426,7 +426,7 @@ $(function() {
     });
     $( "#pioneers-section-list" ).each(function() {
       $( "#row-template" ).hide();
-      $.getJSON("https://www.openactive.io/community/community.json", function (data) {
+      $.getJSON("/community-members/community.json", function (data) {
           //Only continue if load successful, ignore failure
           console.log("Got community list!");
           updateCommunityList(data);
@@ -434,7 +434,7 @@ $(function() {
       });
     });
     $( "#slide-button" ).contextmenu(function (e) {
-      window.location.href = 'https://www.openactive.io/participate.html';
+      window.location.href = '/participate.html';
       return false;
     });
 });
@@ -458,7 +458,7 @@ $(function() {
 });
 $(function() {
   $( "#metric-live" ).each(function() {
-    $.getJSON( "https://www.openactive.io/datasets/directory.json", function( data ) {
+    $.getJSON( "/datasets/directory.json", function( data ) {
       $( "#metric-live" ).text(data.length)
     });
   });

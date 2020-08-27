@@ -198,11 +198,11 @@ window.cookieconsent.initialise({
         <div data-ix="display-none-on-load" class="seemore3 w-clearfix">
           <p class="whitetext">You need to amend your terms and conditions to indicate that your users&#x27; sessions will be published openly. You may also give your users an option to opt-out of session publishing, while sending them an e-mail notifying them that you are turning data sharing on.</p>
           <p class="whitetext">A simple addition to your Terms and Conditions similar to the following:</p>
-          <p class="quote whitetext"><strong>Publishing Sessions Openly</strong><br>Information about your session that is already available publicly (e.g. title, location, description, date/time, price, images) will be published as open data for anyone to access, use and share, licensed under the <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License (cc-by) version 4</a>. This gives your sessions more visibility by publishing them openly to apps and websites that will help you promote your sessions, including but not limited to those listed <a target="_blank" href="https://www.openactive.io/pioneers.html">here</a>. This will help more people find your sessions, and will not incur any additional cost to you. [You may opt-out of this free service in your settings page.]</p>
+          <p class="quote whitetext"><strong>Publishing Sessions Openly</strong><br>Information about your session that is already available publicly (e.g. title, location, description, date/time, price, images) will be published as open data for anyone to access, use and share, licensed under the <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License (cc-by) version 4</a>. This gives your sessions more visibility by publishing them openly to apps and websites that will help you promote your sessions, including but not limited to those listed <a target="_blank" href="/pioneers.html">here</a>. This will help more people find your sessions, and will not incur any additional cost to you. [You may opt-out of this free service in your settings page.]</p>
           <p class="whitetext">A simple opt-out checkbox visible in your application as below:</p><img src="images/tick.png" class="tickbox">
-          <p class="whitetext"><strong>Publish Sessions Openly</strong><br>Information about your sessions that is already available publicly (e.g. title, location, description, date/time, price, images) is published for anyone to access, use and share. This helps more people find your sessions, by making them visible on other apps and websites such as the ones listed <a target="_blank" href="https://www.openactive.io/pioneers.html">here</a>. This does not incur any additional cost to you.</p>
+          <p class="whitetext"><strong>Publish Sessions Openly</strong><br>Information about your sessions that is already available publicly (e.g. title, location, description, date/time, price, images) is published for anyone to access, use and share. This helps more people find your sessions, by making them visible on other apps and websites such as the ones listed <a target="_blank" href="/pioneers.html">here</a>. This does not incur any additional cost to you.</p>
           <p class="whitetext">A simple e-mail alert similar to the following:</p>
-          <p class="quote whitetext"><strong>Publishing Sessions Openly</strong><br>We are now giving your sessions more visibility by publishing information about them that is already available publicly (e.g. title, location, description, date/time, price, images) openly to <a href="pioneers.html">apps and websites that will help you promote your sessions</a>, such as the ones listed <a target="_blank" href="https://www.openactive.io/pioneers.html">here</a>. This will help more people find your sessions, and will not incur any additional cost to you. If you want to opt-out of this free service, <a href="#">go to your settings page</a>.</p>
+          <p class="quote whitetext"><strong>Publishing Sessions Openly</strong><br>We are now giving your sessions more visibility by publishing information about them that is already available publicly (e.g. title, location, description, date/time, price, images) openly to <a href="pioneers.html">apps and websites that will help you promote your sessions</a>, such as the ones listed <a target="_blank" href="/pioneers.html">here</a>. This will help more people find your sessions, and will not incur any additional cost to you. If you want to opt-out of this free service, <a href="#">go to your settings page</a>.</p>
         </div>
         <h3 class="white-heading">4) Create a dataset homepage</h3>
         <h4 class="subheading4">(estimated time to complete: 1.5 hours)</h4>
@@ -315,7 +315,7 @@ function updateCommunityList(data) {
       var k = keys[i];
       var v = map[k];
       createRow("#pioneers-section-list",
-        "https://www.openactive.io/community/logos/" + v.image,
+        "/community-members/logos/" + v.image,
         v.url,
         v.name,
         v.description); 
@@ -450,7 +450,7 @@ $(function() {
     };
     $( "#data-user-section-list" ).each(function() {
       $( "#row-template" ).hide();
-      $.getJSON( "https://www.openactive.io/datasets/directory.json", function( body ) {
+      $.getJSON( "/datasets/directory.json", function( body ) {
           for(var i = 0; i < body.length; i++) {
             var metadata = body[i];
             console.log("Metadata for: " + metadata["dataset-site-url"] + " (Publish: " + metadata["publish"] + ")");
@@ -462,7 +462,7 @@ $(function() {
     });
     $( "#pioneers-section-list" ).each(function() {
       $( "#row-template" ).hide();
-      $.getJSON("https://www.openactive.io/community/community.json", function (data) {
+      $.getJSON("/community-members/community.json", function (data) {
           //Only continue if load successful, ignore failure
           console.log("Got community list!");
           updateCommunityList(data);
@@ -470,7 +470,7 @@ $(function() {
       });
     });
     $( "#slide-button" ).contextmenu(function (e) {
-      window.location.href = 'https://www.openactive.io/participate.html';
+      window.location.href = '/participate.html';
       return false;
     });
 });
@@ -494,7 +494,7 @@ $(function() {
 });
 $(function() {
   $( "#metric-live" ).each(function() {
-    $.getJSON( "https://www.openactive.io/datasets/directory.json", function( data ) {
+    $.getJSON( "/datasets/directory.json", function( data ) {
       $( "#metric-live" ).text(data.length)
     });
   });
