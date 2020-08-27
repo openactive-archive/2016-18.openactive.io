@@ -1,8 +1,0 @@
-sudo: false
-before_script:
-  - "export TRAVIS_COMMIT_MSG=\"$(git log --format=%B -n 1 $TRAVIS_COMMIT)\""
-script: bash ./deploy.sh
-env:
-  global:
-    - GH_REF: github.com/openactive/openactive.github.io
-    - secure: 06DoTuqL20/dr5+jNlq2NKlF6ZewOuQKzLGqnXosi1nqGymN3FL87ZaWqRb2KX2+C0S9u/yPIoDdnCLDDrZfPMuVnafYYUk43d+gBT1Ettxeat5eLtroUDB+Sd+IgP8S9qQw98UIMXM4D7IVh/i7eimCnC3gS3H9iYwHvXpP/1YtQYXP1l3VUsIWH4hZxFrHIr9ask9xUF+DnUZGRzHhVSjuonciuPgWgBxt+Ld+5iOFuouqwZj2DDx8uuKHXuM7Lzp/kymPfsRHkHU4PP1DGBuSVrZMvXY3fdGhOl3or775XA4LN4lOV0SqfmfUFkEq1kUR2pr/WIRE6WV7l562xw8TjCwugyT73oG6k8W0kMevi3ZDGjNRiiZccZMLsOeWv50sSEe5fzUM0kZHK407Qes6y9TARuqCORtKQOW8N2UjIU5pOCg4kizldOSB89+HQq/e+IrMmwyaYYLr8OomsUOiXZzIxiJNVcSRpETbtkYVEfuh0YfP+XlGGK7BiP2aBYD86TARauqo876+jvXWDs7YbJwwK4qa+/tBz+5gsmkqjqhHPTE4hwL7vd9RZtv6M7ttc4bkQQaodVvfcUVn38LCIjdX7zBNbUzhkiDnhFBg5XS6sNF5h2d8NZpQdfF85grze4IaRFX5rc4ExHvoKR0CqTYUDhWw8S+BZJ1yP4M=
